@@ -7,20 +7,14 @@ import InstagramFeed from "@/components/instagramfeed";
 import LetsBuildBold from "../components/letsbuildbold";
 import HeroBanner from "../components/footer";
 import Header from "../components/header";
-
 import ScrollCarousel from "../components/scrollcarousel";
-import Video from "../components/gif";
 import HorizontalSrcoll from "@/components/horizontalSrcoll";
 import SwipeCards from "@/components/testimonials";
-
 
 export default function Home() {
   return (
     <>
-
-
-        <Header />
-
+      <Header />
 
       <div>
         <Hero />
@@ -35,9 +29,8 @@ export default function Home() {
           </div>
         </div>
         <div className="p-10 m-1">
-
-        <AboutSection />
-        <ScrollCarousel />
+          <AboutSection />
+          <ScrollCarousel />
         </div>
         {/* <Video/> */}
         <div className="">
@@ -47,7 +40,7 @@ export default function Home() {
       <div className="">
         <HorizontalSrcoll />
       </div>
-      <SwipeCards/>
+      <SwipeCards />
       <InstagramFeed />
       <LetsBuildBold />
       <HeroBanner />

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import MarqueeItem from "./Marquee";
 
-
 type CardType = {
   url: string;
   title: string;
@@ -20,16 +19,21 @@ const cards: CardType[] = [
 const ScrollCarousel = () => {
   return (
     <section className="relative w-full">
-      <div className="sticky top-0  z-0">
-        <div className=" w-full  flex items-center justify-center ">
+      {/* Marquee */}
+      <div className="sticky top-0 z-0">
+        <div className="w-full flex items-center justify-center">
           <MarqueeItem />
         </div>
       </div>
 
+      {/* Cards Section */}
       <div className="w-full z-10 px-4 pt-20 pb-40 bg-transparent mt-screen">
         <div className="flex flex-col items-center gap-10">
           {cards.map((card) => (
-            <div className="relative h-[450px] w-full max-w-[450px] overflow-hidden  ">
+            <div
+              key={card.id} // ✅ Added key here
+              className="relative h-[450px] w-full max-w-[450px] overflow-hidden"
+            >
               <Image
                 src={card.url}
                 alt={card.title}
@@ -44,21 +48,5 @@ const ScrollCarousel = () => {
     </section>
   );
 };
-
-const Card = ({ card }: { card: CardType }) => {
-  return (
-    <div className="relative h-[450px] w-full max-w-[450px] overflow-hidden  rounded-xl shadow-lg">
-      <Image
-        src={card.url}
-        alt={card.title}
-        width={500}
-        height={500}
-        className="object-cover h-full w-full"
-      />
-    </div>
-  );
-};
-
-
 
 export default ScrollCarousel;

@@ -34,15 +34,15 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 items-start">
 
             <div>
-              <p className="text-base md:text-lg">
-                I help consumer brands turn ideas into design-driven success. As
-                a design partner, I craft identities, packaging, and brand
-                experiences that don't just look good—they sell, connect, and
-                last. For me, great design isn't decoration; it's strategy,
-                storytelling, and impact.
-              </p>
+            <p className="text-base md:text-lg">
+  I help consumer brands turn ideas into design-driven success. As
+  a design partner, I craft identities, packaging, and brand
+  experiences that don&#39;t just look good&#8212;they sell, connect, and
+  last. For me, great design isn&#39;t decoration; it&#39;s strategy,
+  storytelling, and impact.
+</p>
             </div>
-           
+
             <div className="flex flex-col items-start">
               <p className="text-base md:text-lg uppercase mb-6">
                 I HELP CONSUMER BRANDS TURN IDEAS INTO DESIGN-DRIVEN SUCCESS. AS
