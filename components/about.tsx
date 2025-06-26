@@ -1,0 +1,64 @@
+import Link from "next/link";
+import React from "react";
+import Image from "next/image";
+
+const AboutSection = () => {
+  return (
+    <section className="text-[#2C2216]  sm:py-8 px-4 sm:px-8 lg:px-8">
+      <div className="container mx-auto max-w-6xl">
+
+        <div className="flex flex-col gap-y-8">
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 max-h-2xl items-end">
+
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                your design partner in <br />
+                building /brands that sell, <br />
+                scale & stand out*.
+              </h2>
+            </div>
+
+            <div className="w-full h-auto mt-8 lg:mt-0">
+              <Image
+                src="/magnifying_glass_with_paper.png"
+                alt="A magnifying glass over a piece of paper"
+                width={513}
+                height={378}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+          </div>
+
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 items-start">
+
+            <div>
+              <p className="text-base md:text-lg">
+                I help consumer brands turn ideas into design-driven success. As
+                a design partner, I craft identities, packaging, and brand
+                experiences that don't just look good—they sell, connect, and
+                last. For me, great design isn't decoration; it's strategy,
+                storytelling, and impact.
+              </p>
+            </div>
+           
+            <div className="flex flex-col items-start">
+              <p className="text-base md:text-lg uppercase mb-6">
+                I HELP CONSUMER BRANDS TURN IDEAS INTO DESIGN-DRIVEN SUCCESS. AS
+                A DESIGN PARTNER, I CRAFT IDENTITIES, PACKAGING, AND
+              </p>
+              <Link href="/about">
+                <button className="border border-[#2C2216] text-[#2C2216] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
+                  about <span>↗</span>
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;

@@ -1,0 +1,46 @@
+"use client";
+import React from "react";
+import Image from "next/image";
+
+const HeroBanner = () => {
+  return (
+    <section className="relative bg-[#C29776] text-white px-6 md:px-12 pt-10 pb-20 rounded-t-[2rem] overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
+      
+        <h1 className="text-[3.5rem] mx-10 sm:text-[6rem] md:text-[8rem] lg:text-[10rem] font-serif  leading-none text-[#fff8e8]">
+          akshita <span className="font-sans">agarwal*</span>
+        </h1>
+
+        <div className="absolute left-1/2 top-[35%] transform -translate-x-1/2 -translate-y-37 z-2">
+          <div className=" ">
+
+            <Image
+              src="/moniter.png"
+              alt="Monitor"
+              width={500}
+              height={30}
+              className=""
+            />
+          </div>
+        </div>
+
+
+        <div className="mt-40 flex flex-wrap justify-between items-center text-black text-lg font-light px-2 md:px-0">
+          <div className="flex space-x-6">
+            <a href="#">/work</a>
+            <a href="#">/play</a>
+            <a href="#">/about</a>
+            <a href="#">/contact</a>
+          </div>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#">/linkedin</a>
+            <a href="#">/instagram</a>
+            <a href="#">/behance</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroBanner;
