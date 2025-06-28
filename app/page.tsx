@@ -35,7 +35,7 @@ export default function Home() {
         </div>
         {/* <Video/> */}
         <div className="">
-          <Image src="/gif2.png" alt="gif" width={1550} height={750}></Image>
+          <Image src="/gif4x.png" alt="gif" width={1550} height={750}></Image>
         </div>
       </div>
       <div className="">

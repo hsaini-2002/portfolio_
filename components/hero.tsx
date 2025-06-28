@@ -26,7 +26,7 @@ export default function Hero() {
         className="w-auto py-10 hidden sm:flex items-center justify-center text-[#2C2216] text-sm"
         ref={imageRef}
       >
-        <Image src="/HeroContainer.png" alt="hero" width={1108} height={674} />
+        <Image src="/hero4x.png" alt="hero" width={1108} height={674} />
       </div>
 
       {/* Middle Image for mobile */}
