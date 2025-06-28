@@ -20,7 +20,7 @@ const HorizontalScroll = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["40%", "-80%"]);
 
   return (
-    <section ref={sectionRef} className="relative h-[200vh]  ">
+    <section ref={sectionRef} className="relative h-[200vh]   ">
       {/* Sticky Heading */}
       <div className="sticky top-0 h-screen flex flex-col justify-between  p-20 z-0">
         <h1 className="text-[#51331B] font-serif text-6xl md:text-7xl leading-tight">
@@ -35,7 +35,7 @@ const HorizontalScroll = () => {
       </div>
 
       {/* Scrollable Cards */}
-      <div className="absolute top-0 h-full w-full  pointer-events-none">
+      <div className="absolute top-0 h-full w-full   pointer-events-none">
         <div className="sticky top-0 h-screen flex  p-20  overflow-hidden">
           <motion.div
             style={{ x }}
@@ -44,7 +44,7 @@ const HorizontalScroll = () => {
             {cards.map((card, index) => (
               <div
                 key={card.id}
-                className="relative"
+                className="relative mt-5"
                 style={{
                   top: index % 2 === 0 ? "0px" : "300px", // stagger vertically
                 }}
@@ -64,9 +64,9 @@ const Card = ({ card, index }: { card: CardType; index: number }) => {
   const sizes = [
     { h: 300, w: 300 },
     { h: 250, w: 300 },
-    { h: 300, w: 250 },
+    { h: 300, w: 500 },
     { h: 200, w: 200 },
-    { h: 270, w: 270 },
+    { h: 300, w: 300 },
   ];
   const { h, w } = sizes[index % sizes.length];
 
@@ -86,13 +86,12 @@ const Card = ({ card, index }: { card: CardType; index: number }) => {
   );
 };
 
-
 const cards: CardType[] = [
-  { url: "/Container1.png", title: "Title 1", id: 1 },
-  { url: "/Container2.png", title: "Title 2", id: 2 },
-  { url: "/Container3.png", title: "Title 3", id: 3 },
-  { url: "/Container4.png", title: "Title 4", id: 4 },
-  { url: "/Container2.png", title: "Title 5", id: 5 },
+  { url: "/living.png", title: "Title 1", id: 1 },
+  { url: "/kissable.png", title: "Title 2", id: 2 },
+  { url: "/Solace.png", title: "Title 3", id: 3 },
+  { url: "/naija.png", title: "Title 4", id: 4 },
+  { url: "/label.png", title: "Title 5", id: 5 },
 ];
 
 export default HorizontalScroll;

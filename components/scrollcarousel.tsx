@@ -9,11 +9,11 @@ type CardType = {
 };
 
 const cards: CardType[] = [
-  { url: "/carousel1.png", title: "branding strategy", id: 1 },
-  { url: "/carousel2.png", title: "visual identity", id: 2 },
+  { url: "/brand2.png", title: "branding strategy", id: 1 },
+  { url: "/visual.png", title: "visual identity", id: 2 },
   { url: "/carousel3.png", title: "packaging design", id: 3 },
   { url: "/carousel4.png", title: "publication design", id: 4 },
-  { url: "/carousel5.png", title: "uiux design", id: 5 },
+  { url: "/uiux.png", title: "uiux design", id: 5 },
 ];
 
 const ScrollCarousel = () => {
@@ -21,7 +21,7 @@ const ScrollCarousel = () => {
     <section className="relative w-full">
       {/* Marquee */}
       <div className="sticky top-0 z-0">
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full h-[100vh] flex items-center justify-center">
           <MarqueeItem />
         </div>
       </div>
@@ -32,7 +32,7 @@ const ScrollCarousel = () => {
           {cards.map((card) => (
             <div
               key={card.id} // ✅ Added key here
-              className="relative h-[450px] w-full max-w-[450px] overflow-hidden"
+              className="relative h-[450px]  w-full max-w-[450px] overflow-hidden"
             >
               <Image
                 src={card.url}

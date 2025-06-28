@@ -6,8 +6,7 @@ import {useRef}   from 'react'
 export default function Hero() {
     const imageRef = useRef<HTMLDivElement | null>(null);
   return (
-    <section className="bg-[#fdf8e2] w-full px-4 py-5">
-
+    <section className="bg-[#FEFCE4] w-full px-4 py-5">
       <div className="text-xs md:text-sm text-[#2C2216] tracking-wider uppercase border-t border-b border-[#2C2216] py-2 flex flex-wrap justify-center gap-4">
         <span>Brand Strategy</span>
         <span>|</span>
@@ -27,7 +26,7 @@ export default function Hero() {
         className="w-auto py-10 hidden sm:flex items-center justify-center text-[#2C2216] text-sm"
         ref={imageRef}
       >
-        <Image src="/Hero.png" alt="hero" width={1108} height={674} />
+        <Image src="/HeroContainer.png" alt="hero" width={1108} height={674} />
       </div>
 
       {/* Middle Image for mobile */}
@@ -51,7 +50,6 @@ export default function Hero() {
           </p>
         </div>
 
-      
         <div className="flex-1 text-[#2C2216] text-md leading-relaxed max-w-lg mx-10 lg:mx-4">
           <p>
             I help consumer brands turn ideas into design-driven success. As a

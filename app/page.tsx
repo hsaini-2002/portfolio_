@@ -14,27 +14,28 @@ import SwipeCards from "@/components/testimonials";
 export default function Home() {
   return (
     <>
+
       <Header />
 
       <div>
         <Hero />
         <div className="flex flex-col items-center justify-center text-center pt-10 pb-0">
           <FeaturedWorkStack />
-          <div>
-            <Link href="/about">
-              <button className="border border-[#2C2216] text-[#2C2216] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
-                view <span>↗</span>
-              </button>
-            </Link>
-          </div>
         </div>
-        <div className="p-10 m-1">
+        <div className="flex justify-center items-center  mt-8">
+          <Link href="/work" className="inline-block">
+            <button className="border border-[#2C2216] text-[#2C2216] px-4  text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
+              view work <span>↗</span>
+            </button>
+          </Link>
+        </div>
+        <div className=" mt-20  md:mt-10">
           <AboutSection />
           <ScrollCarousel />
         </div>
         {/* <Video/> */}
         <div className="">
-          <Image src="/gif.png" alt="gif" width={1550} height={750}></Image>
+          <Image src="/gif2.png" alt="gif" width={1550} height={750}></Image>
         </div>
       </div>
       <div className="">

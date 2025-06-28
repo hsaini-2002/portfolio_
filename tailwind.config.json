@@ -1,0 +1,9 @@
+{
+  "theme": {
+    "extend": {
+      "backgroundImage": {
+        "hero": "url('/Vector.png')"
+      }
+    }
+  }
+}

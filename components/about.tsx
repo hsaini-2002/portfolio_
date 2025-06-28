@@ -21,7 +21,7 @@ const AboutSection = () => {
 
             <div className="w-full h-auto mt-8 lg:mt-0">
               <Image
-                src="/magnifying_glass_with_paper.png"
+                src="/loremipsum.png"
                 alt="A magnifying glass over a piece of paper"
                 width={513}
                 height={378}
