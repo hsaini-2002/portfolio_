@@ -21,6 +21,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
   targetScale,
 }) => {
   const scale = useTransform(progress, [0, 1], [1, targetScale]);
+  console.log(i, "i");
 
   return (
     <div className=" sm:w-xl md:w-3xl lg:w-6xl flex items-center justify-center sticky  top-0 px-4 z-[5]">
@@ -51,6 +52,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
               <button className="hidden md:block p-2 mt-4 hover:bg-white/10 transition">
                 <ArrowRight className={`${card.fontColor} h-5 w-5`} />
               </button>
+
             </div>
           </div>
 

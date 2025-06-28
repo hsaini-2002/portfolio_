@@ -9,7 +9,6 @@ const LetsBuildBold = () => {
       <div className="md:hidden mb-8">
         {""}
         {/* Only visible on mobile, adds margin below */}
-
       </div>
 
       <div className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto relative z-10 flex flex-col items-center justify-center">
@@ -39,7 +38,7 @@ const LetsBuildBold = () => {
         {/* Heading */}
         <div className="relative">
           <h2 className="text-[1.5rem] xs:text-[1.8rem] sm:text-[2rem]  md:text-[2.8rem] lg:text-[3.2rem] xl:text-[3.6rem] text-[#51331B] font-serif  leading-[1.1] sm:leading-tight">
-            Let's build <span className="font-sans">/bold</span>
+            Let&#39;s build<span className="font-sans">/bold</span>
           </h2>
 
           {/* Stamp positioned relative to heading/main content, adjusted for responsiveness */}

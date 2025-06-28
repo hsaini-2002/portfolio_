@@ -1,10 +1,9 @@
 "use client";
-import Link from "next/link";
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
 import { featuredWork } from "./data";
 import WorkCard from "./card";
-import { div } from "framer-motion/client";
+
 
 export default function FeaturedWorkStack() {
   const containerRef = useRef<HTMLElement>(null);
