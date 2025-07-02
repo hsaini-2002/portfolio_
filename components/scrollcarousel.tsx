@@ -9,11 +9,11 @@ type CardType = {
 };
 
 const cards: CardType[] = [
-  { url: "/brand2.png", title: "branding strategy", id: 1 },
-  { url: "/visual.png", title: "visual identity", id: 2 },
-  { url: "/carousel3.png", title: "packaging design", id: 3 },
-  { url: "/carousel4.png", title: "publication design", id: 4 },
-  { url: "/uiux.png", title: "uiux design", id: 5 },
+  { url: "/brand1.1.png", title: "branding strategy", id: 1 },
+  { url: "/visual2.1.png", title: "visual identity", id: 2 },
+  { url: "/packaging_design.png", title: "packaging design", id: 3 },
+  { url: "/publication_design.png", title: "publication design", id: 4 },
+  { url: "/uiux.1.1.png", title: "uiux design", id: 5 },
 ];
 
 const ScrollCarousel = () => {
@@ -32,14 +32,21 @@ const ScrollCarousel = () => {
           {cards.map((card) => (
             <div
               key={card.id} // ✅ Added key here
-              className="relative h-[450px]  w-full max-w-[450px] overflow-hidden"
+              className="relative overflow-hidden"
             >
               <Image
                 src={card.url}
                 alt={card.title}
-                width={500}
-                height={500}
-                className="object-cover h-full w-full"
+                width={300}
+                height={300}
+                className="md:hidden"
+              />
+              <Image
+                src={card.url}
+                alt={card.title}
+                width={400}
+                height={400}
+                className="hidden md:flex"
               />
             </div>
           ))}

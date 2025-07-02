@@ -24,8 +24,8 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center  mt-8">
           <Link href="/work" className="inline-block">
-            <button className="border border-[#2C2216] text-[#2C2216] px-4  text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
-              view work <span>↗</span>
+            <button className="border z-20 border-[#2C2216] text-[#2C2216] px-4  text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
+              
             </button>
           </Link>
         </div>

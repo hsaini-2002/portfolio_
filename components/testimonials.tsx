@@ -34,7 +34,7 @@ export default function SwipeCards() {
       {/* Mobile: vertical stack */}
       <div className="relative flex flex-col items-center justify-center sm:hidden">
         <button
-          onClick={prev}
+
           className="mb-4 z-10 p-2 hover:scale-105 transition"
         >
           <Image src="/arrowupmobile.png" alt="up" width={24} height={24} />
@@ -70,7 +70,7 @@ export default function SwipeCards() {
         </div>
 
         <button
-          onClick={next}
+        
           className="mt-4 z-10 p-2 hover:scale-105 transition"
         >
           <Image src="/arrowdownmobile.png" alt="down" width={24} height={24} />

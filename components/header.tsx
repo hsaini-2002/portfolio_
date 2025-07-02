@@ -31,11 +31,9 @@ export default function Header() {
         style={{ height: headerHeight }}
       >
         <motion.div className="hidden md:block" style={{ scale: logoScale }}>
-          <Link
-            href="/"
-            className="text-xl font-serif   font-bold text-[#2C2216] whitespace-nowrap"
-          >
-            akshita agarwal*
+          <Link href="/" className="text-xl  text-[#2C2216] whitespace-nowrap">
+            <span className=" font-heading font-body"> akshita</span>
+            <span > agarwal*</span>
           </Link>
         </motion.div>
 
@@ -59,7 +57,16 @@ export default function Header() {
               href="/contact"
               className="bg-[#2C2216] text-[#fdf8e2] px-4 py-2 text-sm  flex items-center gap-1"
             >
-              start a project <span> <Image src="/buttonarrow.png" alt="bottom" width={15} height={15}/> </span>
+              start a project{" "}
+              <span>
+                {" "}
+                <Image
+                  src="/buttonarrow.png"
+                  alt="bottom"
+                  width={15}
+                  height={15}
+                />{" "}
+              </span>
             </Link>
           </div>
         </motion.div>
