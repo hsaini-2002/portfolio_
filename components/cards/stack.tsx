@@ -23,7 +23,7 @@ export default function FeaturedWorkStack() {
           <div className="text-left z-10 relative"></div>
           <div>
             <div className="text-black">
-              <h1 className=" py-0 md:py-2 text-[#2C2216] text-4xl md:text-3xl font-bold lg:text-5xl font-serif">
+              <h1 className=" py-0 md:py-2 text-[#51331B] text-4xl md:text-3xl  lg:text-5xl ">
                 /featured{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10">work</span>
@@ -52,7 +52,6 @@ export default function FeaturedWorkStack() {
         </div>
         {/* Button Section */}
       </main>
-      
     </>
   );
 }

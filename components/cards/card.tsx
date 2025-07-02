@@ -52,7 +52,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
               <div className={`${card.fontColor} border opacity-15 my-2`}></div>
               <div className="flex items-start justify-between">
                 <h1
-                  className={` text-3xl md:text-4xl flex items-start font-bold font-serif mt-1 mb-5 ${card.fontColor}`}
+                  className={` text-3xl md:text-4xl flex items-start  mt-1 mb-5 ${card.fontColor}`}
                 >
                   {card.title}
                 </h1>

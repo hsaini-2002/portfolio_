@@ -17,26 +17,23 @@ export default function SwipeCards() {
   const [current, setCurrent] = useState(1);
 
   const prev = () => {
-    setCurrent((prev) => (prev === 0 ? cardData.length - 1 : prev - 1));
+    // setCurrent((prev) => (prev === 0 ? cardData.length - 1 : prev - 1));
   };
 
   const next = () => {
-    setCurrent((prev) => (prev === cardData.length - 1 ? 0 : prev + 1));
+    // setCurrent((prev) => (prev === cardData.length - 1 ? 0 : prev + 1));
   };
 
   return (
     <div className="bg-[#40352F] py-16 px-4 text-center text-white">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-10">
-        /letters from clients
+        <span className="font-sans">/letters</span> from clients
       </h2>
 
       {/* Mobile: vertical stack */}
       {/* Mobile: vertical stack */}
       <div className="relative flex flex-col items-center justify-center sm:hidden">
-        <button
-
-          className="mb-4 z-10 p-2 hover:scale-105 transition"
-        >
+        <button className="mb-4 z-10 p-2 hover:scale-105 transition">
           <Image src="/arrowupmobile.png" alt="up" width={24} height={24} />
         </button>
 
@@ -69,10 +66,7 @@ export default function SwipeCards() {
           })}
         </div>
 
-        <button
-        
-          className="mt-4 z-10 p-2 hover:scale-105 transition"
-        >
+        <button className="mt-4 z-10 p-2 hover:scale-105 transition">
           <Image src="/arrowdownmobile.png" alt="down" width={24} height={24} />
         </button>
       </div>

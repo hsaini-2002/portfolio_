@@ -32,8 +32,8 @@ export default function Header() {
       >
         <motion.div className="hidden md:block" style={{ scale: logoScale }}>
           <Link href="/" className="text-xl  text-[#2C2216] whitespace-nowrap">
-            <span className=" font-heading font-body"> akshita</span>
-            <span > agarwal*</span>
+            <span className="font-domine"> akshita</span>
+            <span> agarwal*</span>
           </Link>
         </motion.div>
 
@@ -43,7 +43,7 @@ export default function Header() {
           style={{ opacity: navOpacity }}
         >
           {/* Left: Nav links */}
-          <nav className="flex space-x-6 text-[#2C2216] text-sm font-medium">
+          <nav className="flex space-x-6 text-[#2C2216] text-lg font-medium">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
                 {link.name}

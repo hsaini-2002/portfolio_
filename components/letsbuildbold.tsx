@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const LetsBuildBold = () => {
   return (
-    <section className="bg-[#FFF8E7] px-4 py-12 sm:py-16 md:py-20 lg:py-24 w-full relative flex flex-col items-center justify-center text-center overflow-hidden">
+    <section className=" px-4 py-12 sm:py-16 md:py-20 lg:py-24 w-full relative flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Mobile-specific button: visit instagram */}
       <div className="md:hidden mb-8">
         {""}
@@ -38,7 +38,7 @@ const LetsBuildBold = () => {
         {/* Heading */}
         <div className="relative">
           <h2 className="text-[1.5rem] xs:text-[1.8rem] sm:text-[2rem]  md:text-[2.8rem] lg:text-[3.2rem] xl:text-[3.6rem] text-[#51331B] font-serif  leading-[1.1] sm:leading-tight">
-            Let&#39;s build<span className="font-sans">/bold</span>
+            <span className="font-sans">Let&#39;s</span> build<span className="font-sans">/bold</span>
           </h2>
 
           {/* Stamp positioned relative to heading/main content, adjusted for responsiveness */}

@@ -17,13 +17,13 @@ const Marquee = () => {
   ]
 
   const lowerMarquee = [
-  "makes move",
-  "makes move",
-  "makes move",
-  "makes move",
-  "makes move",
-  "makes move",
-  "makes move",
+  "makes moves",
+  "makes moves",
+  "makes moves",
+  "makes moves",
+  "makes moves",
+  "makes moves",
+  "makes moves",
   ];
 
   return (

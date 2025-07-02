@@ -23,9 +23,9 @@ const HorizontalScroll = () => {
     <section ref={sectionRef} className="relative h-[200vh]   ">
       {/* Sticky Heading */}
       <div className="sticky top-0 h-screen flex flex-col justify-between  p-20 z-0">
-        <h1 className="text-[#51331B] font-serif text-6xl md:text-7xl leading-tight">
+        <h1 className="text-[#51331B]  text-6xl md:text-7xl leading-tight">
           /brand identities <br />
-          that drive success
+          that drive <span className="font-domine"> success</span>
         </h1>
         <div className="mt-10">
           <button className="border m-10 border-[#51331B] text-[#51331B] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#51331B] hover:text-white transition-colors">

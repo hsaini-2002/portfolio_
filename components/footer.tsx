@@ -5,9 +5,14 @@ import Image from "next/image";
 const HeroBanner = () => {
   return (
     <section className="relative bg-[#C29776] text-white px-6 md:px-12 pt-10 pb-20 rounded-t-[2rem] overflow-hidden">
-      <div className="max-w-7xl mx-auto relative z-10">
-        <h1 className="text-[2.5rem] mx-10 sm:text-[3rem] md:text-[8rem] lg:text-[10rem] font-serif  leading-none text-[#FEFCE4]">
-          akshita <span className="font-sans">agarwal*</span>
+      <div className="max-w-7xl  relative z-10">
+        <h1 className="text-[2.5rem] md:mx-5 flex px-4 md:text-[8rem] lg:text-[10rem]   leading-none text-[#FEFCE4]">
+          <span className="font-domine  md:mx-4 mx-1 sm:text-[1.5rem] md:text-[8rem] lg:text-[10rem]   leading-none">
+            akshita
+          </span>{" "}
+          <span className="text-[2.5rem] md:mx-4 mx-1  md:text-[8rem] lg:text-[10rem]   leading-none">
+            agarwal*
+          </span>
         </h1>
 
         <div className="absolute left-1/2 top-[55%] md:top-[35%] transform -translate-x-1/2 -translate-y-37 z-2">

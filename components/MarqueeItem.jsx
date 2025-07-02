@@ -12,7 +12,10 @@ const MarqueeItem = ({ images, from, to }) => {
         className="flex text-4xl items-center justify-between flex-shrink-0 "
       >
         {images.map((image, index) => (
-          <h1 key={index} className="text-[#D1CFAE] text-[13vw] my-2 font-bold px-2">
+          <h1
+            key={index}
+            className="text-[#D1CFAE] text-[13vw] my-2 font-dm-sans px-2"
+          >
             {image}
           </h1>
         ))}
@@ -25,7 +28,10 @@ const MarqueeItem = ({ images, from, to }) => {
         className="flex flex-shrink-0 justify-between items-center"
       >
         {images.map((image, index) => (
-          <h1 key={index} className="text-[#D1CFAE] text-[13vw] my-2 font-bold px-2">
+          <h1
+            key={index}
+            className="text-[#D1CFAE] text-[13vw] my-2 font-dm-sans px-2"
+          >
             {image}
           </h1>
         ))}

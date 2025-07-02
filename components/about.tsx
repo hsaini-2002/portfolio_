@@ -14,11 +14,17 @@ const AboutSection = () => {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 max-h-2xl items-end">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                your design partner in <br />
-                building /brands that sell, <br />
-                scale & stand out*.
-              </h2>
+              <h1 className="text-4xl md:text-5xl  leading-tight ">
+                <span className="font-sans"> your design partner in</span>
+                <br />
+                <span className="font-domine"> building </span>
+                <span>
+                  {" "}
+                  /brands that sell, <br />
+                  scale &{" "}
+                </span>{" "}
+                <span className="font-domine"> stand out*.</span>
+              </h1>
             </div>
 
             <div className="w-full h-auto mt-8 lg:mt-0">
@@ -44,7 +50,7 @@ const AboutSection = () => {
             </div>
 
             <div className="flex flex-col items-center  md:items-start">
-              <p className="md:text-base md:text-lg uppercase mb-6 text-center md:text-left font-bold">
+              <p className="md:text-base md:text-md uppercase mb-6 text-center md:text-left font-bold">
                 I HELP CONSUMER BRANDS TURN IDEAS INTO DESIGN-DRIVEN SUCCESS. AS
                 A DESIGN PARTNER, I CRAFT IDENTITIES, PACKAGING, AND
               </p>
