@@ -17,11 +17,11 @@ export default function SwipeCards() {
   const [current, setCurrent] = useState(1);
 
   const prev = () => {
-    // setCurrent((prev) => (prev === 0 ? cardData.length - 1 : prev - 1));
+    setCurrent(1);
   };
 
   const next = () => {
-    // setCurrent((prev) => (prev === cardData.length - 1 ? 0 : prev + 1));
+    setCurrent(1);
   };
 
   return (
