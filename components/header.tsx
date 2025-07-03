@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <>
       <motion.header
-        className="sticky top-0  z-50 flex my-6 justify-center items-center bg-[#FEFCE4]"
+        className="sticky top-0   z-50 flex my-6 justify-center items-center bg-[#FEFCE4]"
         style={{ height: headerHeight }}
       >
         <motion.div className="hidden md:block" style={{ scale: logoScale }}>
@@ -72,28 +72,40 @@ export default function Header() {
         </motion.div>
 
         {/* --- Mobile Header (Static) --- */}
-        <div className="md:hidden w-full h-auto px-4 flex justify-between items-center">
-          {/* Left: Logo */}
-          <div className="text-3xl font-serif font-bold text-[#2C2216] whitespace-nowrap">
-            akshita agarwal*
+
+        <div className="flex flex-col w-full md:hidden ">
+          <div className="md:hidden w-full h-auto px-4  flex  items-end justify-end">
+            <div>
+           
+              <Link
+                href="/"
+                className="bg-[#2C2216] text-[#fdf8e2] mx-2  px-1 py-2 text-xs flex items-end  gap-1 "
+              >
+                start a project{" "}
+                <span>
+                  <Image
+                    src="/buttonarrow.png"
+                    alt="bottom"
+                    width={15}
+                    height={15}
+                  />{" "}
+                </span>
+              </Link>
+            </div>
+
+            {/* Right: Menu Icon */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-[#675744]"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-
-          {/* Middle: Button */}
-          <Link
-            href="/contact"
-            className="bg-[#2C2216] text-[#fdf8e2] mx-2 px-1 py-2 text-xs flex items-center gap-1 "
-          >
-            start a project <span>↗</span>
-          </Link>
-
-          {/* Right: Menu Icon */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-[#675744]"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="text-[3.2rem]  items-center justify-center  flex    text-[#2C2216] md:hidden  whitespace-nowrap">
+            <span className="font-domine  px-3 ">akshita</span> agarwal{" "}
+            <span className="font-domine">*</span>
+          </div>
         </div>
         {/* --- Mobile Menu --- */}
         {isMenuOpen && (

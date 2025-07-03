@@ -12,18 +12,12 @@ const AboutSection = () => {
               view work <span>↗</span>
             </button>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 max-h-2xl items-end">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap max-h-2xl items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl  leading-tight ">
-                <span className="font-sans"> your design partner in</span>
-                <br />
-                <span className="font-domine"> building </span>
-                <span>
-                  {" "}
-                  /brands that sell, <br />
-                  scale &{" "}
-                </span>{" "}
-                <span className="font-domine"> stand out*.</span>
+              <h1 className="text-4xl md:text-5xl text-[#51331B] leading-tight ">
+                your design partner in{" "}
+                <span className="font-domine">building</span>/brands that sell,
+                scale &<span className="font-domine"> stand out*.</span>
               </h1>
             </div>
 
