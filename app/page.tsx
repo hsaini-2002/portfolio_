@@ -1,22 +1,19 @@
 import Image from "next/image";
-import Hero from "../components/hero";
-import FeaturedWorkStack from "../components/cards/stack";
+import Hero from "../components/landing_page/hero";
+import FeaturedWorkStack from "../components/landing_page/cards/stack";
 import Link from "next/link";
-import AboutSection from "../components/about";
-import InstagramFeed from "@/components/instagramfeed";
-import LetsBuildBold from "../components/letsbuildbold";
-import HeroBanner from "../components/footer";
-import Header from "../components/header";
-import ScrollCarousel from "../components/scrollcarousel";
-import HorizontalSrcoll from "@/components/horizontalSrcoll";
-import SwipeCards from "@/components/testimonials";
+import AboutSection from "../components/landing_page/about";
+import InstagramFeed from "@/components/landing_page/instagramfeed";
+import LetsBuildBold from "../components/landing_page/letsbuildbold";
+import ScrollCarousel from "../components/landing_page/scrollcarousel";
+import HorizontalSrcoll from "@/components/landing_page/horizontalSrcoll";
+import SwipeCards from "@/components/landing_page/testimonials";
+import Header from "@/components/landing_page/header";
 
 export default function Home() {
   return (
     <>
-
-      <Header />
-
+<Header/>
       <div>
         <Hero />
         <div className="flex flex-col items-center justify-center text-center pt-10 pb-0">
@@ -25,7 +22,7 @@ export default function Home() {
         <div className="flex justify-center items-center  mt-8">
           <Link href="/work" className="inline-block">
             <button className="border z-20 border-[#2C2216] text-[#2C2216] px-4  text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
-              
+
             </button>
           </Link>
         </div>
@@ -44,7 +41,7 @@ export default function Home() {
       <SwipeCards />
       <InstagramFeed />
       <LetsBuildBold />
-      <HeroBanner />
+
     </>
   );
 }

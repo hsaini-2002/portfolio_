@@ -22,7 +22,7 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Marquee.jsx", "components/MarqueeItem.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/landing_page/Marquee.jsx", "components/landing_page/MarqueeItem.jsx"],
   "exclude": ["node_modules"]
 }
 
