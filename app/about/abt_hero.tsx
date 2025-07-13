@@ -37,7 +37,7 @@ export default function HeroSection() {
                 className="mb-4"
               />
               <p className="text-2xl font-light  text-[#4a3b2f] italic">
-                Hi, I'm Akshita!
+                Hi, I&apos;m Akshita!
               </p>
             </div>
           </div>
@@ -93,7 +93,7 @@ className='object-fit'
               className="mb-4 ri "
             />
             <p className="text-xl font-light w-full  text-[#4a3b2f] italic">
-              Hi, I'm Akshita!
+              Hi, I&apos;m Akshita!
             </p>
           </div>
 

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {ThemeProvider} from "../components/theme-provider";
 import "./globals.css";
 import { DM_Sans, Domine } from "next/font/google";
-import Header from "@/components/landing_page/header";
 import HeroBanner from "@/components/landing_page/footer";
 // import "./globals.css";
 
@@ -35,7 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          
+
           <main className="min-h-screen font-body">{children}</main>
           <HeroBanner />
         </ThemeProvider>

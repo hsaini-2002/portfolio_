@@ -18,11 +18,11 @@ export default function Abt_header() {
 
     const animationRange = [0, 400];
 
-    const headerHeight = useTransform(scrollY, animationRange, ["80vh", "96px"]);
+    // const headerHeight = useTransform(scrollY, animationRange, ["80vh", "96px"]);
 
-    const logoScale = useTransform(scrollY, animationRange, ["7vw", 2]);
+    // const logoScale = useTransform(scrollY, animationRange, ["7vw", 2]);
 
-    const navOpacity = useTransform(scrollY, [300, 400], [0, 1]);
+    // const navOpacity = useTransform(scrollY, [300, 400], [0, 1]);
 
     return (
         <>
