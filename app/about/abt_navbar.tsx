@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,9 +14,9 @@ const navLinks = [
 
 export default function Abt_header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { scrollY } = useScroll();
+    // const { scrollY } = useScroll();
 
-    const animationRange = [0, 400];
+    // const animationRange = [0, 400];
 
     // const headerHeight = useTransform(scrollY, animationRange, ["80vh", "96px"]);
 
