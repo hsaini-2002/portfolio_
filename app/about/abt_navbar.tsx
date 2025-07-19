@@ -27,7 +27,7 @@ export default function Abt_header() {
     return (
         <>
             <motion.header
-                className="sticky top-0   z-50 flex  justify-center items-center "
+                className=" top-0 z-50 flex justify-center items-center relative"
                 // style={{ height: headerHeight }}
             >
                 <motion.div
@@ -44,7 +44,7 @@ export default function Abt_header() {
                 <motion.div className="hidden md:block" >
                     <Link href="/" className="text-5xl  text-[#2C2216]  whitespace-nowrap">
                         <span className="font-domine"> akshita</span>
-                        <span> agarwal*</span>
+                        <span> agarwal</span><span className="font-domine">*</span>
                     </Link>
                 </motion.div>
 
@@ -75,10 +75,10 @@ export default function Abt_header() {
                 {/* --- Mobile Header (Static) --- */}
 
                 <div className="flex flex-col  md:hidden ">
-                    <div className="md:hidden   flex  items-center mr-1 justify-end bg-[#FEFCE4]">
-                    <div className="text-[2rem]  items-center justify-center  flex    text-[#2C2216] md:hidden  whitespace-nowrap">
-                        <span className="font-domine  pr-3 ">akshita</span> agarwal{" "}
-                        <span className="font-domine">*</span>
+                    <div className="md:hidden   flex  items-center mr-1 justify-end bg-[#FEFCE4] p-2">
+                    <div className="text-2xl  items-center justify-center flex  text-[#2C2216] md:hidden  whitespace-nowrap">
+                        <span className="font-domine pr-2 ">akshita</span>
+                        <span className="font-domine">agarwal*</span>
                     </div>
                         <div>
 
@@ -111,17 +111,19 @@ export default function Abt_header() {
                 {/* --- Mobile Menu --- */}
                 {isMenuOpen && (
                     <motion.div
-                        className="fixed top-0 left-0 w-full h-screen bg-[#FEFCE4] z-50 flex flex-col items-center justify-center"
-                        initial={{ opacity: 0, y: -50 }}
+                        className="absolute top-full left-0 w-full bg-[#FEFCE4] border-t border-[#2C2216]/10 shadow-lg z-40"
+                        initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -50 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.2 }}
                     >
-                        <nav className="flex flex-col space-y-6 text-[#2C2216] text-lg font-medium">
+                        <nav className="flex flex-col py-4 px-6">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.href}
                                     href={link.href}
                                     onClick={() => setIsMenuOpen(false)}
+                                    className="py-3 text-[#2C2216] text-lg font-medium border-b border-[#2C2216]/10 last:border-b-0 hover:bg-[#2C2216]/5 transition-colors"
                                 >
                                     {link.name}
                                 </Link>

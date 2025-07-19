@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         body: ["var(--font-dm-sans)", "sans-serif"],
         heading: ["var(--font-domine)", "serif"],
+        custom: ["CustomFont", "sans-serif"], // custom font
       },
     },
   },

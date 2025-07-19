@@ -33,7 +33,7 @@ export default function Header() {
         <motion.div className="hidden md:block" style={{ scale: logoScale }}>
           <Link href="/" className="text-xl  text-[#2C2216] whitespace-nowrap">
             <span className="font-domine"> akshita</span>
-            <span> agarwal*</span>
+            <span> agarwal</span><span className="font-domine">*</span>
           </Link>
         </motion.div>
 

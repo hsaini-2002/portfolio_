@@ -1,109 +1,167 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function HeroSection() {
-    const [isHovered, setIsHovered] = useState(false);
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"]
+    });
+    
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
     return (
-        <section className="w-full h-screen font-sans text-white">
+        <section ref={ref} className="w-full h-auto md:h-screen text-white">
             {/* Desktop Layout */}
-            <div className="hidden lg:flex">
+            <div className="hidden lg:flex h-full relative">
                 
-                <div className="flex-1 bg-[#231f20] px-16 py-20 space-y-30">
-                    <div className="border-amber-700 border-4">
-                    <div>
-                    <h1 className="text-[#b2b9ff] text-6xl leading-tight font-semibold">
-                        the idea of design is <br /> shifting. it’s dynamic <br /> than ever.
-                    </h1>
+                <div className="flex-1 bg-[#40352F] px-20 py-15 flex flex-col">
+                    {/* Main Heading */}
+                    <div className="mb-16">
+                        <h1 className="text-[#AAC7FF] text-6xl font-domine leading-18 tracking-[-0.57px] font-normal">
+                            the idea of design is <br /> shifting. it’s dynamic <br /> than ever.
+                        </h1>
                     </div>
-                    </div>
-                    <div className="border-t border-gray-500 w-fit pt-4">
-                        <div className="border-2 border-amber-400">
-                        <h2 className="text-sm uppercase text-gray-400 tracking-widest">The Design Game</h2>
-                        <p className="text-sm text-gray-300 max-w-md pt-2">
-                            I help consumer brands turn ideas into design–driven success. I help consumer brands turn ideas into design–driven success.
-                        </p>
 
-                    <div className="grid grid-cols-2 gap-10 text-sm text-gray-300 max-w-5xl">
-                        <p>
-                            I create strategies that cut through the noise and make an impact. I believe great design isn’t just about looking good—it’s about telling a story that sticks.
-                        </p>
+                    {/* Two Column Layout */}
+                    <div className="grid grid-cols-2 gap-32 flex-1">
+                        {/* Left Column */}
+                        <div className="flex flex-col">
+                            {/* Horizontal line */}
+                            <div className="border-t border-[#AAC7FF] w-full mb-4"></div>
+                            
+                            {/* Section heading */}
+                            <h2 className="text-lg font-semibold uppercase text-[#AAC7FF] leading-8 mb-2">The Design Game</h2>
+                            
+                            {/* Push content to bottom with flex-grow */}
+                            <div className="flex-grow"></div>
+                            
+                            {/* Content at bottom with increased spacing */}
+                            <p className="text-sm text-[#AAC7FF] leading-5 pr-8 mb-8 font-regular">
+                                I create strategies that cut through the noise and make an impact. I believe great design isn’t just about looking good—it’s about telling a story that sticks.
+                            </p>
+                        </div>
+
+                        {/* Right Column */}
+                        <div className="flex flex-col pr-2">
+                            {/* Horizontal line */}
+                            <div className="border-t border-[#AAC7FF] w-full mb-4"></div>
+                            
+                            {/* Content at same level as left column heading */}
+                            <p className="text-sm text-[#AAC7FF] leading-5 mb-8">
+                                I help consumer brands turn ideas into design–driven success. I help consumer brands turn ideas into design–driven success.
+                            </p>
+                            
+                            {/* Push content to bottom with flex-grow */}
+                            <div className="flex-grow"></div>
+                            
+                            {/* Content at bottom with increased spacing */}
+                            <p className="text-sm text-[#AAC7FF] leading-5 ">
+                                Passionate about fair creative practices and building a strong design community, I’m here to make brands look good and mean something. My industry connections and sharp eye for final output mean I know how to make ideas look good—and make sense.
+                            </p>
                         </div>
                     </div>
-                        <div className="border-2 border-emerald-800">
-                        <p>
-                            Passionate about fair creative practices and building a strong design community, I’m here to make brands look good and mean something. My industry connections and sharp eye for final output mean I know how to make ideas look good—and make sense.
-                        </p>
-                    </div>
-                </div>
                 </div>
 
-                <div className="flex-[0.5] relative bg-[#2d2420] flex items-center justify-center">
-                    <motion.div
-                        className="absolute top-10 right-20 rotate-12 cursor-pointer"
-                        animate={{ rotate: isHovered ? 180 : 0 }}
-                        transition={{ duration: 0.5 }}
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
-                    >
-                        <Image src="/rotating_button.png" alt="rotating" width={100} height={100} />
-                    </motion.div>
+                {/* Rotating button positioned at the exact partition */}
+                <motion.div
+                    className="absolute top-30 left-[63%] -translate-x-1/2 -translate-y-1/2 rotate-12 cursor-pointer z-30"
+                    style={{ rotate }}
+                    transition={{ duration: 0.5, ease: "linear" }}
+                >
+                    <Image src="/rotating_button.png" alt="rotating" width={136} height={136} />
+                </motion.div>
 
+                <div className="flex-[0.7] relative bg-[#40352F] flex items-center justify-center overflow-hidden">
                     <Image
                         src="/women_portrait.png"
                         alt="woman"
-
-                        fill
-                        className=""
+                        width={700}
+                        height={904} 
+                        className="object-cover h-full absolute left-0"
                     />
                 </div>
             </div>
 
             {/* Mobile Layout */}
-            <div className="lg:hidden flex flex-col w-full bg-[#231f20] text-white px-6 py-10 space-y-8">
-                <h1 className="text-[#b2b9ff] text-3xl leading-snug font-semibold">
-                    the idea of design is <br /> shifting. it’s dynamic <br /> than ever.
-                </h1>
+            <div className="lg:hidden h-auto bg-[#40352F] text-white flex flex-col mb-16 md:mb-20">
+                {/* Content with padding */}
+                <div className="px-4 md:px-6 py-6 md:py-8 relative">
+                    {/* Main Heading */}
+                    <div className="mb-6 md:mb-8">
+                        <h1 className="text-[#AAC7FF] text-2xl md:text-3xl lg:text-4xl font-domine leading-tight tracking-[-0.57px] font-normal">
+                            the idea of design is <br /> shifting. it&apos;s dynamic <br /> than ever.
+                        </h1>
+                    </div>
 
-                <div className="border-t border-gray-500 w-fit pt-4">
-                    <h2 className="text-sm uppercase text-gray-400 tracking-widest">The Design Game</h2>
-                    <p className="text-sm text-gray-300 max-w-md pt-2">
-                        I help consumer brands turn ideas into design–driven success. I help consumer brands turn ideas into design–driven success.
-                    </p>
-                </div>
+                    {/* Two Column Layout - Mobile */}
+                    <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-8">
+                        {/* Left Column */}
+                        <div className="flex flex-col">
+                            {/* Horizontal line */}
+                            <div className="border-t border-[#AAC7FF] w-full mb-2 md:mb-3"></div>
+                            
+                            {/* Section heading */}
+                            <h2 className="text-xs md:text-sm lg:text-base font-semibold uppercase text-[#AAC7FF] leading-4 md:leading-5 lg:leading-6 mb-2 md:mb-3">The Design Game</h2>
+                            
+                            {/* Reduced vertical spacing but keep flex-grow */}
+                            <div className="flex-grow min-h-1 md:min-h-8"></div>
+                            
+                            {/* Content at bottom with reduced spacing */}
+                            <p className="text-xs md:text-sm text-[#AAC7FF] leading-4 md:leading-5 pr-6 md:pr-4 mb-10 md:mb-6 font-regular">
+                                I create strategies that cut through the noise and make an impact. I believe great design isn&apos;t just about looking good—it&apos;s about telling a story that sticks.
+                            </p>
+                        </div>
 
-                <div className="text-sm text-gray-300 space-y-6">
-                    <p>
-                        I create strategies that cut through the noise and make an impact. I believe great design isn’t just about looking good—it’s about telling a story that sticks.
-                    </p>
-                    <p>
-                        Passionate about fair creative practices and building a strong design community, I’m here to make brands look good and mean something. My industry connections and sharp eye for final output mean I know how to make ideas look good—and make sense.
-                    </p>
-                </div>
+                        {/* Right Column */}
+                        <div className="flex flex-col">
+                            {/* Horizontal line */}
+                            <div className="border-t border-[#AAC7FF] w-full mb-2 md:mb-3"></div>
+                            
+                            {/* Content at same level as left column heading */}
+                            <p className="text-xs md:text-sm text-[#AAC7FF] leading-4 md:leading-5 mb-2 md:mb-6">
+                                I help consumer brands turn ideas into design–driven success. I help consumer brands turn ideas into design–driven success.
+                            </p>
+                            
+                            {/* Reduced vertical spacing but keep flex-grow */}
+                            <div className="flex-grow min-h-4 md:min-h-8"></div>
+                            
+                            {/* Content at bottom with reduced spacing */}
+                            <p className="text-xs md:text-sm text-[#AAC7FF] leading-4 md:leading-5 mt-2 md:mt-6">
+                                Passionate about fair creative practices and building a strong design community, I&apos;m here to make brands look good and mean something. My industry connections and sharp eye for final output mean I know how to make ideas look good—and make sense.
+                            </p>
+                        </div>
+                    </div>
 
-                <div className="relative mt-6">
+                    {/* Rotating button positioned at the boundary - half in text, half in image */}
                     <motion.div
-                        className="absolute -top-10 left-1/2 -translate-x-1/2 cursor-pointer"
-                        animate={{ rotate: isHovered ? 180 : 0 }}
-                        transition={{ duration: 0.5 }}
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
+                        className="absolute -bottom-12 left-8 md:-bottom-14 md:left-12 cursor-pointer z-40"
+                        style={{ rotate }}
+                        transition={{ duration: 0.5, ease: "linear" }}
                     >
-                        <Image src="/rotate-sticker.png" alt="rotating" width={80} height={80} />
+                        <Image src="/rotating_button.png" alt="rotating" width={95} height={95} className="md:w-28 md:h-28" />
                     </motion.div>
+                </div>
 
-                    <Image
-                        src="/portrait.png"
-                        alt="woman"
-                        width={300}
-                        height={400}
-                        className="mx-auto rounded-lg object-cover"
-                    />
+                {/* Image Section - Full width, no padding, within section boundaries */}
+                <div className="relative w-full h-[60vh] md:h-[60vh] bg-[#40352F] overflow-hidden">
+                    {/* Women portrait image - positioned towards bottom right like in reference */}
+                    <div className="absolute inset-0 flex">
+                        <Image
+                            src="/women_portrait.png"
+                            alt="woman"
+                            width={400}
+                            height={418}
+                            className="object-cover h-full w-full"
+                            priority
+                        />
+                    </div>
                 </div>
             </div>
+            
         </section>
     );
 }

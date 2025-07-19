@@ -5,7 +5,7 @@ import Image from "next/image";
 const HeroBanner = () => {
   return (
     <section className="relative bg-[#C29776] text-white px-6 md:px-12 pt-10 pb-20 rounded-t-[2rem] overflow-hidden">
-      <div className="max-w-7xl  relative z-10 ">
+      <div className="max-w-[1512px]  relative z-10 ">
         <h1 className="text-[2.5rem] md:mx-5 flex justify-center flex px-4 md:text-[8rem] lg:text-[10rem]   leading-none text-[#FEFCE4]">
           <span className="font-domine  md:mx-4 mx-1 sm:text-[2.5rem] md:text-[5rem] lg:text-[10rem]   leading-none">
             akshita

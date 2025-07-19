@@ -4,17 +4,18 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <div className="bg-[#E9DAB6] flex flex-col items-center justify-center h-screen border-2 border-amber-700">
+    <div className="bg-[#E9DAB6] flex flex-col items-center justify-center md:h-screen border-2 border-amber-700">
       {/* Desktop View */}
       <section className="hidden max-h-screen  md:flex  flex-col items-center justify-center  px-12 pt-12">
         <div className="w-full max-w-8xl pl-12 pr-12  flex flex-row items-center justify-between">
           {/* Left Image */}
           <div className="relative w-[320px] h-[410px] -mb-28">
             <Image
-              src="/aksgif2.png"
+              src="/gif22.gif"
               alt="Working"
               fill
               className="object-cover rounded-xl"
+              unoptimized={true}
             />
           </div>
 
@@ -36,7 +37,7 @@ export default function HeroSection() {
                 height={0}
                 className="mb-4"
               />
-              <p className="text-2xl font-light  text-[#4a3b2f] italic">
+              <p className="text-2xl font-custom  text-[#4a3b2f] italic">
                 Hi, I&apos;m Akshita!
               </p>
             </div>
@@ -45,11 +46,11 @@ export default function HeroSection() {
           {/* Right Image */}
           <div className="relative items-start mb-30">
             <Image
-              src="/mobileinhand.png"
+              src="/gif32.gif"
               alt="Phone call"
-        width={460}
-height={380}
-className='object-fit'
+              width={460}
+              height={380}
+              className='object-fit'
             />
           </div>
         </div>
@@ -60,7 +61,7 @@ className='object-fit'
         {/* Top Image */}
         <div className="relative  my-12  flex ">
           <Image
-            src="/aksgif2.png"
+            src="/gif22.gif"
             alt="Working"
            width={210}
            height={210}
@@ -70,7 +71,7 @@ className='object-fit'
 
         {/* Center Text */}
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-3xl font-domine text-[#9F8267]">
+          <h1 className="text-[32px] font-domine text-[#9F8267]">
             design<span className="font-sans"> /details </span>that<br />
             feel like magic
           </h1>
@@ -81,32 +82,30 @@ className='object-fit'
 
         </div>
 
-        {/* Arrow + Text */}
-        <div className="relative  border-2  h-[320px] mx-auto mt-10 flex justify-between  ">
-          {/* Arrow + Text Behind */}
-          <div className="absolute top-10 border-2  justify-between   items-end h-auto  flex flex-col ">
+        {/* Arrow + Text and Phone Image */}
+        <div className="relative w-full h-[300px] mt-5 flex justify-center items-end">
+          {/* Arrow and Text */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
             <Image
               src="/Vector 41.png"
               alt="arrow"
-              width={8}
-              height={80}
-              className="mb-4 ri "
+              width={10} // Adjusted width for better visibility
+              height={60} // Adjusted height for better proportion
+              className="mb-2"
             />
-            <p className="text-xl font-light w-full  text-[#4a3b2f] italic">
+            <p className="text-xl font-custom text-[#4a3b2f] mt-24 italic whitespace-nowrap">
               Hi, I&apos;m Akshita!
             </p>
           </div>
 
-          {/* Phone Image on Top */}
-          <div className="absolute  right-0 border-2    w-[150px] h-[280px]">
-<div className='border-2'>
+          {/* Phone Image */}
+          <div className="absolute bottom-0 right-[-120px] w-[337px] h-[337px] flex items-end justify-end">
             <Image
-              src="/mobileinhand.png"
+              src="/gif32.gif"
               alt="Phone call"
-             width={350}
-             height={350}
-             />
-            </div>
+              layout="fill" // Use layout="fill" to let the parent control size
+              objectFit="contain" // Ensures the image fits within its container
+            />
           </div>
         </div>
 
