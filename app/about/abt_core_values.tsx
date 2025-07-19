@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
 export default function AbtCoreValues() {
@@ -40,94 +41,102 @@ export default function AbtCoreValues() {
                             </div>
                         </div>
                         
-                        {isBrandingOpen && (
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 items-start -mt-4 lg:-mt-12">
-                                {/* Left Column - Packaging Image */}
-                                <div className="lg:col-span-1 mt-8 md:mt-20 lg:mt-40">
-                                    <div className="w-48 h-48 md:w-64 md:h-64 bg-amber-100 rounded-lg overflow-hidden mx-auto lg:mx-0">
-                                        <Image 
-                                            src="/Mask-group.png" 
-                                            alt="Packaging Design" 
-                                            width={340}
-                                            height={356}
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                </div>
-                                
-                                {/* Right Column - Content sections for Branding */}
-                                <div className="lg:col-span-2 space-y-4 md:space-y-6">
-                                    {/* Approach Section */}
-                                    {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
-                                    <div className="grid grid-cols-2 items-start">
-                                        <div className="col-span-1"> {/* Subheading takes 1 column */}
-                                            <h4 className="text-base md:text-xl font-medium text-amber-800">
-                                                /approach
-                                            </h4>
-                                        </div>
-                                        <div className="col-span-1"> {/* Content takes 1 column on mobile, 2 on desktop */}
-                                            <p className="text-sm md:text-base text-amber-800 leading-6 md:leading-7 pr-0 md:pr-16 -ml-6 md:-ml-28 tracking-tight">
-                                                A data driven, brand narrative driven approach to position your brand as a leader in the space. A data driven, brand narrative driven approach to position your brand as a leader in the space.
-                                            </p>
+                        <AnimatePresence>
+                            {isBrandingOpen && (
+                                <motion.div 
+                                    className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 items-start -mt-4 lg:-mt-12"
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: "auto" }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                                >
+                                    {/* Left Column - Packaging Image */}
+                                    <div className="lg:col-span-1 mt-8 md:mt-20 lg:mt-40">
+                                        <div className="w-48 h-48 md:w-64 md:h-64 bg-amber-100 rounded-lg overflow-hidden mx-auto lg:mx-0">
+                                            <Image 
+                                                src="/Mask-group.png" 
+                                                alt="Packaging Design" 
+                                                width={340}
+                                                height={356}
+                                                className="w-full h-full object-cover"
+                                            />
                                         </div>
                                     </div>
                                     
-                                    {/* Process Section */}
-                                    <div className="pt-4 md:pt-6">
-                                        <div className="border-t border-amber-800 mr-0 md:mr-20"></div>
+                                    {/* Right Column - Content sections for Branding */}
+                                    <div className="lg:col-span-2 space-y-4 md:space-y-6">
+                                        {/* Approach Section */}
                                         {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
-                                        <div className="grid grid-cols-2 items-start pt-4 md:pt-6">
+                                        <div className="grid grid-cols-2 items-start">
                                             <div className="col-span-1"> {/* Subheading takes 1 column */}
                                                 <h4 className="text-base md:text-xl font-medium text-amber-800">
-                                                    /process
+                                                    /approach
                                                 </h4>
                                             </div>
                                             <div className="col-span-1"> {/* Content takes 1 column on mobile, 2 on desktop */}
-                                                <div className="relative pr-0 md:pr-20 -ml-6 md:-ml-28">
-                                                    <div className="absolute left-0 top-2 md:top-3 w-px bg-amber-800" style={{ height: 'calc(100% - 1.25rem)' }}></div>
-                                                    <div className="space-y-2 md:space-y-4 ml-4 md:ml-6 leading-6 md:leading-7">
-                                                        <div className="flex items-center">
-                                                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
-                                                            <span className="text-sm md:text-base text-amber-800">Deliverable or step 1</span>
-                                                        </div>
-                                                        <div className="flex items-center">
-                                                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
-                                                            <span className="text-sm md:text-base text-amber-800">Deliverable or step 2</span>
-                                                        </div>
-                                                        <div className="flex items-center">
-                                                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
-                                                            <span className="text-sm md:text-base text-amber-800">Deliverable or step 3</span>
-                                                        </div>
-                                                        <div className="flex items-center">
-                                                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
-                                                            <span className="text-sm md:text-base text-amber-800">Deliverable or step 4</span>
+                                                <p className="text-sm md:text-base text-amber-800 leading-6 md:leading-7 pr-0 md:pr-16 -ml-6 md:-ml-28 tracking-tight">
+                                                    A data driven, brand narrative driven approach to position your brand as a leader in the space. A data driven, brand narrative driven approach to position your brand as a leader in the space.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Process Section */}
+                                        <div className="pt-4 md:pt-6">
+                                            <div className="border-t border-amber-800 mr-0 md:mr-20"></div>
+                                            {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
+                                            <div className="grid grid-cols-2 items-start pt-4 md:pt-6">
+                                                <div className="col-span-1"> {/* Subheading takes 1 column */}
+                                                    <h4 className="text-base md:text-xl font-medium text-amber-800">
+                                                        /process
+                                                    </h4>
+                                                </div>
+                                                <div className="col-span-1"> {/* Content takes 1 column on mobile, 2 on desktop */}
+                                                    <div className="relative pr-0 md:pr-20 -ml-6 md:-ml-28">
+                                                        <div className="absolute left-0 top-2 md:top-3 w-px bg-amber-800" style={{ height: 'calc(100% - 1.25rem)' }}></div>
+                                                        <div className="space-y-2 md:space-y-4 ml-4 md:ml-6 leading-6 md:leading-7">
+                                                            <div className="flex items-center">
+                                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
+                                                                <span className="text-sm md:text-base text-amber-800">Deliverable or step 1</span>
+                                                            </div>
+                                                            <div className="flex items-center">
+                                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
+                                                                <span className="text-sm md:text-base text-amber-800">Deliverable or step 2</span>
+                                                            </div>
+                                                            <div className="flex items-center">
+                                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
+                                                                <span className="text-sm md:text-base text-amber-800">Deliverable or step 3</span>
+                                                            </div>
+                                                            <div className="flex items-center">
+                                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
+                                                                <span className="text-sm md:text-base text-amber-800">Deliverable or step 4</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    {/* Deliverables Section */}
-                                    <div className="pt-4 md:pt-6">
-                                        <div className="border-t border-amber-800 mr-0 md:mr-20"></div>
-                                        {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
-                                        <div className="grid grid-cols-2 items-start pt-4 md:pt-6">
-                                            <div className="col-span-1"> {/* Subheading takes 1 column */}
-                                                <h4 className="text-base md:text-xl font-medium text-amber-800">
-                                                    /deliverables
-                                                </h4>
-                                            </div>
-                                            <div className="col-span-1 mb-4 md:mb-8"> {/* Content takes 1 column on mobile, 2 on desktop */}
-                                                <p className="text-sm md:text-base text-amber-800 pr-0 md:pr-16 -ml-6 md:-ml-28 leading-6 md:leading-7 tracking-tight">
-                                                    Understanding the Product, Creative Direction, Structural Design Graphics, Sampling, Testing
-                                                </p>
+                                        
+                                        {/* Deliverables Section */}
+                                        <div className="pt-4 md:pt-6">
+                                            <div className="border-t border-amber-800 mr-0 md:mr-20"></div>
+                                            {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
+                                            <div className="grid grid-cols-2 items-start pt-4 md:pt-6">
+                                                <div className="col-span-1"> {/* Subheading takes 1 column */}
+                                                    <h4 className="text-base md:text-xl font-medium text-amber-800">
+                                                        /deliverables
+                                                    </h4>
+                                                </div>
+                                                <div className="col-span-1 mb-4 md:mb-8"> {/* Content takes 1 column on mobile, 2 on desktop */}
+                                                    <p className="text-sm md:text-base text-amber-800 pr-0 md:pr-16 -ml-6 md:-ml-28 leading-6 md:leading-7 tracking-tight">
+                                                        Understanding the Product, Creative Direction, Structural Design Graphics, Sampling, Testing
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        )}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
                     
                     {/* Packaging Section */}
@@ -152,94 +161,102 @@ export default function AbtCoreValues() {
                             </div>
                         </div>
                         
-                        {isPackagingOpen && (
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 items-start -mt-4 lg:-mt-12">
-                                {/* Left Column - Packaging Image */}
-                                <div className="lg:col-span-1 mt-8 md:mt-20 lg:mt-40">
-                                    <div className="w-48 h-48 md:w-64 md:h-64 bg-amber-100 rounded-lg overflow-hidden mx-auto lg:mx-0">
-                                        <Image 
-                                            src="/Mask-group.png" 
-                                            alt="Packaging Design" 
-                                            width={340}
-                                            height={356}
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                </div>
-                                
-                                {/* Right Column - Content sections */}
-                                <div className="lg:col-span-2 space-y-4 md:space-y-6">
-                                    {/* Approach Section */}
-                                    {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
-                                    <div className="grid grid-cols-2 items-start">
-                                        <div className="col-span-1"> {/* Subheading takes 1 column */}
-                                            <h4 className="text-base md:text-xl font-medium text-amber-800">
-                                                /approach
-                                            </h4>
-                                        </div>
-                                        <div className="col-span-1"> {/* Content takes 1 column on mobile, 2 on desktop */}
-                                            <p className="text-sm md:text-base text-amber-800 leading-6 md:leading-7 pr-0 md:pr-16 -ml-6 md:-ml-28 tracking-tight">
-                                                A data driven, brand narrative driven approach to position your brand as a leader in the space. A data driven, brand narrative driven approach to position your brand as a leader in the space.
-                                            </p>
+                        <AnimatePresence>
+                            {isPackagingOpen && (
+                                <motion.div 
+                                    className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 items-start -mt-4 lg:-mt-12"
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: "auto" }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                                >
+                                    {/* Left Column - Packaging Image */}
+                                    <div className="lg:col-span-1 mt-8 md:mt-20 lg:mt-40">
+                                        <div className="w-48 h-48 md:w-64 md:h-64 bg-amber-100 rounded-lg overflow-hidden mx-auto lg:mx-0">
+                                            <Image 
+                                                src="/Mask-group.png" 
+                                                alt="Packaging Design" 
+                                                width={340}
+                                                height={356}
+                                                className="w-full h-full object-cover"
+                                            />
                                         </div>
                                     </div>
                                     
-                                    {/* Process Section */}
-                                    <div className="pt-4 md:pt-6">
-                                        <div className="border-t border-amber-800 mr-0 md:mr-20"></div>
+                                    {/* Right Column - Content sections */}
+                                    <div className="lg:col-span-2 space-y-4 md:space-y-6">
+                                        {/* Approach Section */}
                                         {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
-                                        <div className="grid grid-cols-2 items-start pt-4 md:pt-6">
+                                        <div className="grid grid-cols-2 items-start">
                                             <div className="col-span-1"> {/* Subheading takes 1 column */}
                                                 <h4 className="text-base md:text-xl font-medium text-amber-800">
-                                                    /process
+                                                    /approach
                                                 </h4>
                                             </div>
                                             <div className="col-span-1"> {/* Content takes 1 column on mobile, 2 on desktop */}
-                                                <div className="relative pr-0 md:pr-20 -ml-6 md:-ml-28">
-                                                    <div className="absolute left-0 top-2 md:top-3 w-px bg-amber-800" style={{ height: 'calc(100% - 1.25rem)' }}></div>
-                                                    <div className="space-y-2 md:space-y-4 ml-4 md:ml-6 leading-6 md:leading-7">
-                                                        <div className="flex items-center">
-                                                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
-                                                            <span className="text-sm md:text-base text-amber-800">Deliverable or step 1</span>
-                                                        </div>
-                                                        <div className="flex items-center">
-                                                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
-                                                            <span className="text-sm md:text-base text-amber-800">Deliverable or step 2</span>
-                                                        </div>
-                                                        <div className="flex items-center">
-                                                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
-                                                            <span className="text-sm md:text-base text-amber-800">Deliverable or step 3</span>
-                                                        </div>
-                                                        <div className="flex items-center">
-                                                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
-                                                            <span className="text-sm md:text-base text-amber-800">Deliverable or step 4</span>
+                                                <p className="text-sm md:text-base text-amber-800 leading-6 md:leading-7 pr-0 md:pr-16 -ml-6 md:-ml-28 tracking-tight">
+                                                    A data driven, brand narrative driven approach to position your brand as a leader in the space. A data driven, brand narrative driven approach to position your brand as a leader in the space.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Process Section */}
+                                        <div className="pt-4 md:pt-6">
+                                            <div className="border-t border-amber-800 mr-0 md:mr-20"></div>
+                                            {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
+                                            <div className="grid grid-cols-2 items-start pt-4 md:pt-6">
+                                                <div className="col-span-1"> {/* Subheading takes 1 column */}
+                                                    <h4 className="text-base md:text-xl font-medium text-amber-800">
+                                                        /process
+                                                    </h4>
+                                                </div>
+                                                <div className="col-span-1"> {/* Content takes 1 column on mobile, 2 on desktop */}
+                                                    <div className="relative pr-0 md:pr-20 -ml-6 md:-ml-28">
+                                                        <div className="absolute left-0 top-2 md:top-3 w-px bg-amber-800" style={{ height: 'calc(100% - 1.25rem)' }}></div>
+                                                        <div className="space-y-2 md:space-y-4 ml-4 md:ml-6 leading-6 md:leading-7">
+                                                            <div className="flex items-center">
+                                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
+                                                                <span className="text-sm md:text-base text-amber-800">Deliverable or step 1</span>
+                                                            </div>
+                                                            <div className="flex items-center">
+                                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
+                                                                <span className="text-sm md:text-base text-amber-800">Deliverable or step 2</span>
+                                                            </div>
+                                                            <div className="flex items-center">
+                                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
+                                                                <span className="text-sm md:text-base text-amber-800">Deliverable or step 3</span>
+                                                            </div>
+                                                            <div className="flex items-center">
+                                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-amber-800 rounded-full -ml-5 md:-ml-7 mr-2 md:mr-4 relative z-10"></div>
+                                                                <span className="text-sm md:text-base text-amber-800">Deliverable or step 4</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    {/* Deliverables Section */}
-                                    <div className="pt-4 md:pt-6">
-                                        <div className="border-t border-amber-800 mr-0 md:mr-20"></div>
-                                        {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
-                                        <div className="grid grid-cols-2 items-start pt-4 md:pt-6">
-                                            <div className="col-span-1"> {/* Subheading takes 1 column */}
-                                                <h4 className="text-base md:text-xl font-medium text-amber-800">
-                                                    /deliverables
-                                                </h4>
-                                            </div>
-                                            <div className="col-span-1 mb-4 md:mb-8"> {/* Content takes 1 column on mobile, 2 on desktop */}
-                                                <p className="text-sm md:text-base text-amber-800 pr-0 md:pr-16 -ml-6 md:-ml-28 leading-6 md:leading-7 tracking-tight">
-                                                    Understanding the Product, Creative Direction, Structural Design Graphics, Sampling, Testing
-                                                </p>
+                                        
+                                        {/* Deliverables Section */}
+                                        <div className="pt-4 md:pt-6">
+                                            <div className="border-t border-amber-800 mr-0 md:mr-20"></div>
+                                            {/* CHANGE 2: grid-cols-2 for mobile for subheadings and content */}
+                                            <div className="grid grid-cols-2 items-start pt-4 md:pt-6">
+                                                <div className="col-span-1"> {/* Subheading takes 1 column */}
+                                                    <h4 className="text-base md:text-xl font-medium text-amber-800">
+                                                        /deliverables
+                                                    </h4>
+                                                </div>
+                                                <div className="col-span-1 mb-4 md:mb-8"> {/* Content takes 1 column on mobile, 2 on desktop */}
+                                                    <p className="text-sm md:text-base text-amber-800 pr-0 md:pr-16 -ml-6 md:-ml-28 leading-6 md:leading-7 tracking-tight">
+                                                        Understanding the Product, Creative Direction, Structural Design Graphics, Sampling, Testing
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        )}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
                     
                     <div className="border-t border-amber-800"></div>

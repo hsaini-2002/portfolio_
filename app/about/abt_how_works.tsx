@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from "next/image";
 
 export default function AbtWorksWith() {
@@ -48,13 +49,21 @@ export default function AbtWorksWith() {
                   </button>
                 </div>
                 
-                {howItsDoneOpen && (
-                  <div className="mt-6">
-                    <p className="text-[#FEFCE4] leading-6 md:leading-7 tracking-[-0.31px] md:tracking-tighter text-sm md:text-base pr-16">
-                      Through comprehensive research, strategic planning, and iterative design processes that ensure every touchpoint reflects your brand&rsquo;s core values and resonates with your target audience.
-                    </p>
-                  </div>
-                )}
+                <AnimatePresence>
+                  {howItsDoneOpen && (
+                    <motion.div 
+                      className="mt-6"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <p className="text-[#FEFCE4] leading-6 md:leading-7 tracking-[-0.31px] md:tracking-tighter text-sm md:text-base pr-16">
+                        Through comprehensive research, strategic planning, and iterative design processes that ensure every touchpoint reflects your brand&rsquo;s core values and resonates with your target audience.
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               
@@ -75,13 +84,21 @@ export default function AbtWorksWith() {
                   </button>
                 </div>
                 
-                {whyItWorksOpen && (
-                  <div className="mt-6">
-                    <p className="text-[#FEFCE4] leading-6 md:leading-7 tracking-[-0.31px] md:tracking-tighter text-sm md:text-base pr-16">
-                      Because it combines data-driven insights with creative storytelling, ensuring your brand not only looks great but also connects emotionally with your audience and drives measurable business results.
-                    </p>
-                  </div>
-                )}
+                <AnimatePresence>
+                  {whyItWorksOpen && (
+                    <motion.div 
+                      className="mt-6"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <p className="text-[#FEFCE4] leading-6 md:leading-7 tracking-[-0.31px] md:tracking-tighter text-sm md:text-base pr-16">
+                        Because it combines data-driven insights with creative storytelling, ensuring your brand not only looks great but also connects emotionally with your audience and drives measurable business results.
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
               
               {/* What's Different - Expanded */}
@@ -101,13 +118,21 @@ export default function AbtWorksWith() {
                   </button>
                 </div>
                 
-                {whatsDifferentOpen && (
-                  <div className="ml-0">
-                    <p className="text-[#FEFCE4] leading-6 md:leading-7 tracking-[-0.31px] md:tracking-tighter text-sm md:text-base pr-16">
-                      A data driven, brand narrative driven approach to position your brand as a leader in the space. A data driven, brand narrative driven approach to position your brand as a leader in the space.
-                    </p>
-                  </div>
-                )}
+                <AnimatePresence>
+                  {whatsDifferentOpen && (
+                    <motion.div 
+                      className="ml-0"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <p className="text-[#FEFCE4] leading-6 md:leading-7 tracking-[-0.31px] md:tracking-tighter text-sm md:text-base pr-16">
+                        A data driven, brand narrative driven approach to position your brand as a leader in the space. A data driven, brand narrative driven approach to position your brand as a leader in the space.
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           </div>
