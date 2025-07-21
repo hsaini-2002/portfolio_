@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '../work_navbar';
@@ -108,8 +107,16 @@ const projectsData: Record<string, ProjectData> = {
    }
 };
 
-export default function ProjectDetailPage({ params }: { params: { projectId: string } }) {
-  const project = projectsData[params.projectId];
+// Define the expected props interface for the page component
+interface ProjectDetailPageProps {
+  params: Promise<{
+    projectId: string;
+  }>;
+}
+
+export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+  const { projectId } = await params;
+  const project = projectsData[projectId];
 
   if (!project) {
     notFound();
@@ -213,16 +220,16 @@ export default function ProjectDetailPage({ params }: { params: { projectId: str
           <div className="flex flex-col md:flex-row gap-16 py-16">
             <div className="flex flex-col gap-6 md:w-1/2">
               <p className="text-lg  text-[#51331B] leading-[38px] pr-20">
-                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
-                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
-                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
+                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
+                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
+                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
               </p>
             </div>
             <div className="flex flex-col gap-6 md:w-1/2">
               <p className="text-lg text-[#51331B] leading-[38px] pr-20">
-                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
-                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
-                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
+                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
+                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
+                A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
               </p>
             </div>
           </div>
