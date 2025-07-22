@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '../work_navbar';
 import { notFound } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 interface ProjectData {
   id: string;
@@ -143,34 +146,131 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           {/* Left Column - Brand Name & Details */}
           <div className="flex flex-col gap-8 md:w-1/2">
             <div className="flex flex-col gap-4">
-              <h1 className="text-6xl md:text-[85px] font-regular tracking-[-1px] leading-27 text-[#51331B] -mt-6">
+              <motion.h1 
+                className="text-6xl md:text-[85px] font-regular tracking-[-1px] leading-27 text-[#51331B] -mt-6"
+                initial={{ 
+                  filter: 'blur(10px)',
+                  opacity: 0,
+                  rotateX: 45,
+                  x: -100
+                }}
+                whileInView={{
+                  filter: 'blur(0px)',
+                  opacity: 1,
+                  rotateX: 0,
+                  x: 0
+                }}
+                transition={{
+                  duration: 1.2,
+                  ease: [0.23, 1, 0.32, 1]
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 {project.title}
-              </h1>
-              <div className="grid grid-cols-2 gap-8 mt-14">
-                <div className="flex flex-col gap-2">
+              </motion.h1>
+              <motion.div 
+                className="grid grid-cols-2 gap-8 mt-14"
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 0.3,
+                  ease: [0.23, 1, 0.32, 1]
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <motion.div className="flex flex-col gap-2">
                   <div
                     className="absolute w-[152px] h-0 border-t border-[#2C2216]"
                   />
-                  <h4 className="text-[32px] text-[#51331B] leading-14 tracking-[-1px] mt-4 ">/services</h4>
-                  <p className="text-[18px] text-[#51331B] leading-[25px] pr-10">Brand Identity, Packaging, Publication Design</p>
-                </div>
-                <div className="flex flex-col gap-2">
+                  <motion.h4 
+                    className="text-[32px] text-[#51331B] leading-14 tracking-[-1px] mt-4"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: 0.5,
+                      ease: [0.23, 1, 0.32, 1]
+                    }}
+                    viewport={{ once: true, amount: 0.3 }}
+                  >
+                    /services
+                  </motion.h4>
+                  <motion.p 
+                    className="text-[18px] text-[#51331B] leading-[25px] pr-10"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: 0.6,
+                      ease: [0.23, 1, 0.32, 1]
+                    }}
+                    viewport={{ once: true, amount: 0.3 }}
+                  >
+                    Brand Identity, Packaging, Publication Design
+                  </motion.p>
+                </motion.div>
+                <motion.div className="flex flex-col gap-2">
                     <div
                         className="absolute w-[152px] h-0 border-t border-[#2C2216]"        
                     />
-                  <h4 className="text-[32px] text-[#51331B] leading-14 tracking-[-1px] mt-4 ">/industry</h4>
-                  <p className="text-[18px] text-[#51331B] leading-[25px] pr-10">Health & Nutrition</p>
-                </div>
-              </div>
+                  <motion.h4 
+                    className="text-[32px] text-[#51331B] leading-14 tracking-[-1px] mt-4"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: 0.7,
+                      ease: [0.23, 1, 0.32, 1]
+                    }}
+                    viewport={{ once: true, amount: 0.3 }}
+                  >
+                    /industry
+                  </motion.h4>
+                  <motion.p 
+                    className="text-[18px] text-[#51331B] leading-[25px] pr-10"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: 0.8,
+                      ease: [0.23, 1, 0.32, 1]
+                    }}
+                    viewport={{ once: true, amount: 0.3 }}
+                  >
+                    Health & Nutrition
+                  </motion.p>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
 
           {/* Right Column - Description */}
-          <div className="flex flex-col gap-6 md:w-1/2">
-            <p className="text-lg text-[#51331B] leading-relaxed pr-15">
+          <motion.div 
+            className="flex flex-col gap-6 md:w-1/2"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ 
+              duration: 0.8, 
+              delay: 0.4,
+              ease: [0.23, 1, 0.32, 1]
+            }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <motion.p 
+              className="text-lg text-[#51331B] leading-relaxed pr-15"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: 0.6,
+                ease: [0.23, 1, 0.32, 1]
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               {project.description}
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </div>
 
@@ -217,22 +317,71 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           )}
 
           {/* Text Section */}
-          <div className="flex flex-col md:flex-row gap-16 py-16">
-            <div className="flex flex-col gap-6 md:w-1/2">
-              <p className="text-lg  text-[#51331B] leading-[38px] pr-20">
+          <motion.div 
+            className="flex flex-col md:flex-row gap-16 py-16"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ 
+              duration: 0.8,
+              ease: [0.23, 1, 0.32, 1]
+            }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <motion.div 
+              className="flex flex-col gap-6 md:w-1/2"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: 0.2,
+                ease: [0.23, 1, 0.32, 1]
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.p 
+                className="text-lg  text-[#51331B] leading-[38px] pr-20"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.4,
+                  ease: [0.23, 1, 0.32, 1]
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
                 A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
                 A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
-              </p>
-            </div>
-            <div className="flex flex-col gap-6 md:w-1/2">
-              <p className="text-lg text-[#51331B] leading-[38px] pr-20">
+              </motion.p>
+            </motion.div>
+            <motion.div 
+              className="flex flex-col gap-6 md:w-1/2"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: 0.3,
+                ease: [0.23, 1, 0.32, 1]
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.p 
+                className="text-lg text-[#51331B] leading-[38px] pr-20"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.5,
+                  ease: [0.23, 1, 0.32, 1]
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
                 A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
                 A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein.
-              </p>
-            </div>
-          </div>
+              </motion.p>
+            </motion.div>
+          </motion.div>
 
 
           {/* Bottom Row - Mixed Layout */}
