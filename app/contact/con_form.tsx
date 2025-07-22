@@ -50,10 +50,49 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const APPSCRIPT_URL = "https://script.google.com/macros/s/AKfycbztc9R39SNV60m-ZzoEwiCydYYhyUxQ7UnBe0b0EVcgl0jPNeM3Y3rmzw2xqZRkfiU4/exec"; // Replace with your actual URL
+
+  const validateForm = () => {
+    const { fullName, phoneNo, emailId, interests, message } = formData;
+    return (
+      fullName.trim() !== '' &&
+      phoneNo.trim() !== '' &&
+      emailId.trim() !== '' &&
+      interests.length > 0 &&
+      message.trim() !== ''
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    if (!validateForm()) {
+      alert('Please fill all fields and select at least one interest.');
+      return;
+    }
+    try {
+      const response = await fetch(APPSCRIPT_URL, {
+        redirect: "follow",
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+      });
+      if (response.ok) {
+        alert('Form submitted successfully!');
+        setFormData({
+          fullName: '',
+          phoneNo: '',
+          emailId: '',
+          interests: [],
+          message: ''
+        });
+      } else {
+        alert('Submission failed. Please try again later.');
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again later.');
+    }
   };
 
 
