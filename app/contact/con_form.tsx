@@ -90,7 +90,7 @@ export default function ContactForm() {
       } else {
         alert('Submission failed. Please try again later.');
       }
-    } catch (error) {
+    } catch {
       alert('An error occurred. Please try again later.');
     }
   };
