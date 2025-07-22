@@ -78,18 +78,18 @@ export default function WorkPage() {
     <Navbar />
     <div className="min-h-screen bg-[#FEFCE4] mt-20">
       {/* Hero Section */}
-      <div className="pt-20 pb-12 text-center">
-        <h1 className="text-4xl md:text-[85px] font-regular text-[#51331B] mb-8">
+      <div className="md:pt-20 pb-12 text-center">
+        <h1 className="text-[40px] md:text-[85px] font-regular text-[#51331B] mb-8">
           work that drives <span className="font-domine">success</span>
         </h1>
         
         {/* Filter Tags */}
-        <div className="flex flex-wrap justify-center gap-10 mb-16">
+        <div className="flex flex-wrap justify-center gap-6 px-6 md:px-0 md:gap-10 mb-6 md:mb-16">
           {tags.map((tag) => (
             <button
               key={tag}
               onClick={() => setActiveFilter(tag)}
-              className={`px-8 py-2 border text-xl font-medium transition-all duration-200 ${
+              className={`px-7 md:px-8 py-1 md:py-2 border text-base md:text-xl font-medium transition-all duration-200 ${
                 activeFilter === tag 
                   ? 'bg-[#2C2216] text-white border-[#2C2216]' 
                   : 'text-[#2C2216] border-[#2C2216] hover:bg-[#2C2216] hover:text-white'
@@ -101,15 +101,15 @@ export default function WorkPage() {
         </div>
       </div>
 
-      {/* Projects Grid */}
-      <div className="max-w-[1512px] mx-auto pb-20 flex justify-center">
+      {/* Desktop Projects Grid (hidden on mobile) */}
+      <div className="max-w-7xl mx-auto pb-20 justify-center hidden md:flex">
         <div className="flex flex-col gap-6">
           {filteredProjects.length > 0 ? (
             activeFilter === 'all' ? (
               // Original masonry layout for "all" filter
               <>
                 {/* Row 1: Green Oasis (large) + FitFeast (large) */}
-                <div className="flex gap-6">
+                <div className="flex gap-6 pb-10">
                   <Link href={`/work/${projects[0].id}`} className="group cursor-pointer">
                     <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
                       <div className="overflow-hidden">
@@ -118,7 +118,7 @@ export default function WorkPage() {
                           alt={projects[0].title}
                           width={664}
                           height={539}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
                     </div>
@@ -136,7 +136,7 @@ export default function WorkPage() {
                           alt={projects[1].title}
                           width={664}
                           height={539}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
                     </div>
@@ -148,7 +148,7 @@ export default function WorkPage() {
                 </div>
 
                 {/* Row 2: Green Oasis (full width) */}
-                <div className="flex">
+                <div className="flex pb-10">
                   <Link href={`/work/${projects[2].id}`} className="group cursor-pointer">
                     <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
                       <div className="overflow-hidden">
@@ -157,7 +157,7 @@ export default function WorkPage() {
                           alt={projects[2].title}
                           width={1346}
                           height={639}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
                     </div>
@@ -169,7 +169,7 @@ export default function WorkPage() {
                 </div>
 
                 {/* Row 3: Rethink (small) + Green Oasis (medium) */}
-                <div className="flex gap-6">
+                <div className="flex gap-6 pb-10">
                   <Link href={`/work/${projects[3].id}`} className="group cursor-pointer">
                     <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
                       <div className="overflow-hidden">
@@ -178,7 +178,7 @@ export default function WorkPage() {
                           alt={projects[3].title}
                           width={504}
                           height={539}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
                     </div>
@@ -196,7 +196,7 @@ export default function WorkPage() {
                           alt={projects[4].title}
                           width={818}
                           height={539}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
                     </div>
@@ -208,7 +208,7 @@ export default function WorkPage() {
                 </div>
 
                 {/* Row 4: Green Oasis (full width) */}
-                <div className="flex">
+                <div className="flex pb-10">
                   <Link href={`/work/${projects[5].id}`} className="group cursor-pointer">
                     <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
                       <div className="overflow-hidden">
@@ -217,7 +217,7 @@ export default function WorkPage() {
                           alt={projects[5].title}
                           width={1346}
                           height={639}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
                     </div>
@@ -259,6 +259,38 @@ export default function WorkPage() {
           )}
         </div>
       </div>
+
+      {/* Mobile Projects Grid (visible only on mobile) */}
+      <div className="md:hidden block px-4 pb-20">
+        <div className="flex flex-col gap-8">
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project) => (
+              <Link key={project.id} href={`/work/${project.id}`} className="group cursor-pointer">
+                <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                  <div className="overflow-hidden flex justify-center">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={320}
+                      height={220}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                <div className="pt-4 pb-10">
+                  <h3 className="text-2xl font-semibold text-[#51331B] mb-1">{project.title}</h3>
+                  <p className="text-sm tracking-[-0.4px] leading-[28px] text-[#51331B]">{project.description}</p>
+                </div>
+              </Link>
+            ))
+          ) : (
+            <div className="text-center py-20">
+              <p className="text-xl text-[#51331B]">No projects found for this category.</p>
+            </div>
+          )}
+        </div>
+      </div>
+      
     </div>
     </>
     );
