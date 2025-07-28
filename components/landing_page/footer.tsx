@@ -11,7 +11,7 @@ const HeroBanner = () => {
             akshita
           </span>{" "}
           <span className="sm:text-[2.5rem] md:mx-4 mx-1  md:text-[5rem] lg:text-[10rem]   leading-none">
-            agarwal*
+            agarwal<span className="font-domine">*</span>
           </span>
         </h1>
 

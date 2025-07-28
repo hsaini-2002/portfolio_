@@ -267,13 +267,13 @@ export default function WorkPage() {
             filteredProjects.map((project) => (
               <Link key={project.id} href={`/work/${project.id}`} className="group cursor-pointer">
                 <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
-                  <div className="overflow-hidden flex justify-center">
+                  <div className="overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.title}
                       width={320}
-                      height={220}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      height={240}
+                      className="w-full h-[407px] object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 </div>
