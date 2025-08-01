@@ -12,19 +12,19 @@ export default function AbtFeatures() {
   const features = [
     {
       id: 1,
-      image: "/f1.png",
+      image: "/f11.png",
       title: "Research-Driven creativity",
       description: "All projects are grounded deep in strategy and insight.",
     },
     {
       id: 2,
-      image: "/f2.png",
+      image: "/f22.png",
       title: "Storytelling at the core",
       description: "Every visual is crafted to leave a lasting mark and make sense.",
     },
     {
       id: 3,
-      image: "/f3.png",
+      image: "/f33.png",
       title: "Versatile yet impactful",
       description: "Each style is adapted without losing the bold, authentic touch.",
     },

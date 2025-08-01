@@ -55,7 +55,7 @@ export default function SwipeCards() {
                 key={card.id}
                 className={`absolute top- left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out transform ${
                   styles[position] || "opacity-0 scale-90"
-                } ${position === 1 ? "brightness-100" : "brightness-75"}`}
+                } ${position === 1 ? "brightness-100" : "brightness-65"}`}
               >
                 <Image
                   src={card.url}

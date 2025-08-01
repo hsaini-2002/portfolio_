@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
 
 const InstagramFeed = () => {
   // useEffect(() => {
@@ -22,8 +23,9 @@ const InstagramFeed = () => {
         <h1 className="text-[1rem] xs:text-[1.8rem] sm:text-[2rem]   md:text-[1rem] lg:text-[2rem] xl:text-[3.6rem] text-[#51331B]   leading-[1.1] sm:leading-tight">
           /daily <span className="font-domine ">updates</span>
         </h1>
-        <button className="border-2 border-[#2C2216] font-semi-bold text-[#2C2216] md:px-4 px-1 justify-center md:py-2 text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
-          view instagram <span>↗</span>
+        <button className="border-2 border-[#2C2216] font-semi-bold text-[#2C2216] md:px-4 px-1 justify-center md:py-2 text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors group">
+          <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">view instagram</span>
+          <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
         </button>
       </div>
       <div className="powr-social-feed " id="aab29ce9_1750835854"></div>

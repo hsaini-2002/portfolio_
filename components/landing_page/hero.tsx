@@ -23,7 +23,7 @@ export default function Hero() {
           <span>|</span>
           <span>Publication</span>
         </div>
-        <div className="md:hidden  text-xs text-[#2C2216] tracking-wider  uppercase border-t border-b border-[#2C2216] py-2  flex flex-wrap justify-center gap-8">
+        <div className="md:hidden text-xs text-[#2C2216] tracking-wider  uppercase border-t border-b border-[#2C2216] py-2  flex flex-wrap justify-center gap-8">
           <Marquee>
             <div>
               <ul className="flex flex-wrap gap-8">
@@ -62,13 +62,13 @@ export default function Hero() {
         className="w-auto py-5 flex sm:hidden items-center justify-center text-[#2C2216] text-sm"
         ref={imageRef}
       >
-        <Image src="/Hero_mobile.png" alt="hero" width={462} height={523} />
+        <Image src="/Heromobile.png" alt="hero" width={462} height={523} />
       </div>
 
-      <div className="mt-8 flex flex-row items-center justify-center mx-2  ">
+      <div className="mt-8 flex flex-row items-center justify-between md:justify-center mx-4 md:mx-24">
         {/* Hero Content */}
         {/* Left Text Column (mobile stacked) */}
-        <div className="flex text-[#2C2216] text-md leading-relaxed max-w-lg mx-1 lg:mx-4">
+        <div className="flex text-[#2C2216] text-sm md:text-base leading-relaxed mx-1 max-w-[11rem] md:max-w-full lg:mx-18">
           <p>
             I help consumer brands turn ideas into design-driven success. As a
             design partner, I craft identities, packaging, and brand experiences
@@ -78,7 +78,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="flex text-[#2C2216] text-md leading-relaxed max-w-lg mx-1 lg:mx-4">
+        <div className="flex text-[#2C2216] text-sm md:text-base leading-relaxed max-w-[11rem] md:max-w-full mx-1 lg:mx-18">
           <p>
             I help consumer brands turn ideas into design-driven success. As a
             design partner, I craft identities, packaging, and brand experiences

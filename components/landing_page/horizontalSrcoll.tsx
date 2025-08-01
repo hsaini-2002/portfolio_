@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 type CardType = {
   url: string;
@@ -28,8 +29,9 @@ const HorizontalScroll = () => {
           that drive <span className="font-domine"> success</span>
         </h1>
         <div className="md:mt-10">
-          <button className="border m-10 border-[#51331B] text-[#51331B] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#51331B] hover:text-white transition-colors">
-            view work <span>↗</span>
+          <button className="border m-10 border-[#51331B] text-[#51331B] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#51331B] hover:text-white transition-colors group z-20">
+            <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">view work</span>
+            <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
           </button>
         </div>
       </div>
@@ -39,7 +41,7 @@ const HorizontalScroll = () => {
         <div className="sticky top-0 h-screen flex p-5 md:p-20 overflow-hidden">
           <motion.div
             style={{ x }}
-            className="flex gap-4 md:gap-12 px-5 md:px-20 pointer-events-auto relative items-center md:items-start"
+            className="flex gap-4 md:gap-12 px-5 md:px-20 pointer-events-auto relative items-center md:items-start z-10"
           >
             {cards.map((card, index) => (
               <div
