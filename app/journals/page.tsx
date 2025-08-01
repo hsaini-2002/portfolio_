@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Navbar from './jnl_navbar'
 
 export default function JournalsPage() {
@@ -179,7 +180,7 @@ export default function JournalsPage() {
                           {articles
                             .slice(slideIndex * articlesPerPage, (slideIndex + 1) * articlesPerPage)
                             .map((article) => (
-                              <div key={article.id} className="space-y-4">
+                              <Link key={article.id} href={`/journals/${article.id}`} className="space-y-4 cursor-pointer hover:opacity-80 transition-opacity">
                                 <div className="h-100 bg-gray-300 rounded-[8px] overflow-hidden">
 
                                   <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500">
@@ -195,7 +196,7 @@ export default function JournalsPage() {
                                     {article.description}
                                   </p>
                                 </div>
-                              </div>
+                              </Link>
                             ))}
                         </div>
                       </div>
@@ -239,7 +240,7 @@ export default function JournalsPage() {
 
                   {/* Right Side - Article List */}
                   <div className="lg:w-[65%] space-y-6 lg:space-y-8">
-                    <div className="border-b border-[#2C2216] pb-4 lg:pb-6">
+                    <Link href="/journals/1" className="border-b border-[#2C2216] pb-4 lg:pb-6 block hover:opacity-80 transition-opacity">
                       <div className="flex gap-4 lg:gap-6">
                         <div className="w-26 h-26 lg:w-61 lg:h-61 rounded-lg overflow-hidden bg-gray-300 flex-shrink-0">
                           <div className="w-full h-full bg-gray-300 flex items-center justify-center text-xs text-gray-500">
@@ -256,9 +257,9 @@ export default function JournalsPage() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </Link>
 
-                    <div className="border-b border-[#2C2216] pb-4 lg:pb-6">
+                    <Link href="/journals/2" className="border-b border-[#2C2216] pb-4 lg:pb-6 block hover:opacity-80 transition-opacity">
                       <div className="flex gap-4 lg:gap-6">
                         <div className="w-26 h-26 lg:w-61 lg:h-61 rounded-lg overflow-hidden bg-gray-300 flex-shrink-0">
                           <div className="w-full h-full bg-gray-300 flex items-center justify-center text-xs text-gray-500">
@@ -275,9 +276,9 @@ export default function JournalsPage() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </Link>
 
-                    <div className="pb-4 lg:pb-6">
+                    <Link href="/journals/3" className="pb-4 lg:pb-6 block hover:opacity-80 transition-opacity">
                       <div className="flex gap-4 lg:gap-6">
                         <div className="w-26 h-26 lg:w-61 lg:h-61 rounded-lg overflow-hidden bg-gray-300 flex-shrink-0">
                           <div className="w-full h-full bg-gray-300 flex items-center justify-center text-xs text-gray-500">
@@ -294,7 +295,7 @@ export default function JournalsPage() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
