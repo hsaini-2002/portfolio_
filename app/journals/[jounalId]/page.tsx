@@ -35,13 +35,13 @@ const journalPosts = [
 ]
 
 interface JournalDetailPageProps {
-  params: {
+  params: Promise<{
     jounalId: string
-  }
+  }>
 }
 
-export default function JournalDetailPage({ params }: JournalDetailPageProps) {
-  const { jounalId } = params
+export default async function JournalDetailPage({ params }: JournalDetailPageProps) {
+  const { jounalId } = await params
   
   // Find the journal post by ID
   const post = journalPosts.find(p => p.id === jounalId)
