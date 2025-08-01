@@ -22,7 +22,7 @@ export default function WorksWith() {
             </div>
             
             <div>
-              <p className="text-[9px] md:text-base font-normal tracking-[4px] leading-4 md:leading-7 uppercase text-amber-800 mb-10 md:mb-8 mt-10 md:mt-8">
+              <p className="text-[9px] md:text-base font-normal tracking-[4px] leading-4 md:leading-7 uppercase text-[#51331B] mb-10 md:mb-8 mt-10 md:mt-8">
                 I WORK WITH FOUNDERS ACROSS SECTORS THAT ARE PRE SEED - SERIES A
               </p>
               
@@ -100,7 +100,7 @@ export default function WorksWith() {
               <div className="bg-[#E9DAB6] p-4 shadow-lg w-full h-full">
                 <div className="w-full h-full bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-2xl font-light italic text-amber-800 mb-2">Lorem Ipsum</div>
+                    <div className="text-2xl font-light italic text-[#51331B] mb-2">Lorem Ipsum</div>
                     <div className="text-lg font-light italic text-amber-700">Lorem</div>
                     <div className="text-3xl font-light italic text-amber-900 mt-2">Design &</div>
                     <div className="text-3xl font-light italic text-amber-900">Discovery</div>
@@ -114,7 +114,7 @@ export default function WorksWith() {
               <div className="bg-[#E9DAB6] p-1 md:p-4 shadow-lg w-full h-full">
                 <div className="w-full h-full bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 md:p-6 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-sm md:text-2xl font-light italic text-amber-800 mb-1 md:mb-2">Lorem Ipsum</div>
+                    <div className="text-sm md:text-2xl font-light italic text-[#51331B] mb-1 md:mb-2">Lorem Ipsum</div>
                     <div className="text-xs md:text-lg font-light italic text-amber-700">Lorem</div>
                     <div className="text-lg md:text-3xl font-light italic text-amber-900 mt-1 md:mt-2">Design &</div>
                     <div className="text-lg md:text-3xl font-light italic text-amber-900">Discovery</div>

@@ -25,8 +25,8 @@ interface ProjectData {
 
 // Sample project data - in a real app, this would come from a CMS or API
 const projectsData: Record<string, ProjectData> = {
-  'green-oasis-1': {
-    id: 'green-oasis-1',
+  'green-oasis': {
+    id: 'green-oasis',
     title: 'Green Oasis',
     subtitle: 'Farm To Table Restaurant Serving Fresh Experiences',
     description: 'A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. ',
@@ -67,8 +67,8 @@ const projectsData: Record<string, ProjectData> = {
       outcome: 'Achieved 40% increase in shelf visibility and 25% boost in sales within the first quarter of launch.'
     }
   },
-  'rethink': {
-    id: 'rethink',
+  'rethink-hydration': {
+    id: 'rethink-hydration',
     title: 'Rethink!',
     subtitle: 'A bold take on hydration',
     description: 'UI/UX design for an innovative hydration tracking app that encourages healthy drinking habits through gamification and social features.',
@@ -329,7 +329,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           >
             <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-16">
               <motion.div 
-                className="flex flex-col gap-6"
+                className="flex flex-col md:pl-12 gap-6"
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ 
@@ -340,7 +340,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <motion.p 
-                  className="text-xs md:text-sm lg:text-lg text-[#51331B] leading-relaxed lg:leading-[38px] pr-2 md:pr-4 lg:pr-20"
+                  className="text-xs md:text-sm lg:text-lg text-[#51331B] leading-relaxed lg:leading-[38px] pr-2 md:pr-4 lg:pr-10"
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ 
@@ -356,7 +356,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 </motion.p>
               </motion.div>
               <motion.div 
-                className="flex flex-col gap-6"
+                className="flex flex-col md:pl-12 gap-6"
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ 
@@ -367,7 +367,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <motion.p 
-                  className="text-xs md:text-sm lg:text-lg text-[#51331B] leading-relaxed lg:leading-[38px] pr-2 md:pr-4 lg:pr-20"
+                  className="text-xs md:text-sm lg:text-lg text-[#51331B] leading-relaxed lg:leading-[38px] pr-2 md:pr-4 lg:pr-10"
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ 

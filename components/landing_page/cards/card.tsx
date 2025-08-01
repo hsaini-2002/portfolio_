@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion, useTransform, MotionValue } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { WorkCardData } from "./data";
 
 interface WorkCardProps {
@@ -21,7 +22,14 @@ const WorkCard: React.FC<WorkCardProps> = ({
   targetScale,
 }) => {
   const scale = useTransform(progress, [0, 1], [1, targetScale]);
+  const router = useRouter();
   console.log(i, "i");
+
+  const handleNavigateToProject = () => {
+    // Create a URL-friendly slug from the card title
+    const slug = `${card.title.toLowerCase().replace(/\s+/g, '-')}`;
+    router.push(`/work/${slug}`);
+  };
 
   return (
     <div className=" sm:w-xl md:w-3xl lg:w-6xl flex items-center justify-center sticky  top-0 px-4 z-[5]">
@@ -56,7 +64,10 @@ const WorkCard: React.FC<WorkCardProps> = ({
                 >
                   {card.title}
                 </h1>
-                <button className="hidden md:block p-2 mt-4 hover:bg-white/10 transition">
+                <button 
+                  className="hidden md:block p-2 mt-4 hover:bg-white/10 transition"
+                  onClick={handleNavigateToProject}
+                >
                   <ArrowRight className={`${card.fontColor} h-5 w-5`} />
                 </button>
               </div>

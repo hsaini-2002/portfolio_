@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 const LetsBuildBold = () => {
   return (
@@ -38,7 +39,7 @@ const LetsBuildBold = () => {
         {/* Heading */}
         <div className="relative">
           <h2 className="text-[1.5rem] xs:text-[1.8rem] sm:text-[2rem]  md:text-[2.8rem] lg:text-[3.2rem] xl:text-[3.6rem] text-[#51331B] font-serif  leading-[1.1] sm:leading-tight">
-            <span className="font-sans">Let&#39;s</span> build<span className="font-sans">/bold</span>
+            <span className="font-sans">Let&#39;s</span> build {" "}<span className="font-sans">/bold</span>
           </h2>
 
           {/* Stamp positioned relative to heading/main content, adjusted for responsiveness */}
@@ -61,13 +62,11 @@ const LetsBuildBold = () => {
         </div>
 
         {/* Button */}
-        <div className="relative inline-block mt-4 sm:mt-6 md:mt-8">
-          <button className="px-3 py-2 xs:px-4 xs:py-2 sm:px-5 sm:py-3 md:px-6 md:py-3 lg:px-7 lg:py-4 border border-[#51331B] text-[#51331B] rounded-sm font-medium text-sm sm:text-base md:text-lg flex items-center gap-1 sm:gap-2 hover:scale-105 hover:bg-[#51331B] hover:text-white transition-all duration-300 ease-out">
-            start a project
-            <span className="text-sm sm:text-base md:text-lg lg:text-xl">
-              ↗
-            </span>
-          </button>
+        <div className="relative inline-block mt-12 md:mt-8">
+          <button className="inline-flex items-center px-4 md:px-12 py-2 md:py-3 border border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white transition-colors duration-200 group">
+              <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">start a project</span>
+              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+            </button>
         </div>
       </div>
     </section>

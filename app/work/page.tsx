@@ -16,7 +16,7 @@ interface Project {
 export default function WorkPage() {
   const projects: Project[] = [
     {
-      id: 'green-oasis-1',
+      id: 'green-oasis',
       title: 'Green Oasis',
       description: 'Farm To Table Restaurant Serving Fresh Experiences',
       image: '/proj1.png',
@@ -40,7 +40,7 @@ export default function WorkPage() {
       size: 'full'
     },
     {
-      id: 'rethink',
+      id: 'rethink-hydration',
       title: 'Rethink!',
       description: 'A bold take on hydration',
       image: '/proj4.png',
@@ -111,7 +111,7 @@ export default function WorkPage() {
                 {/* Row 1: Green Oasis (large) + FitFeast (large) */}
                 <div className="flex gap-6 pb-10">
                   <Link href={`/work/${projects[0].id}`} className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 ">
                       <div className="overflow-hidden">
                         <Image
                           src={projects[0].image}
@@ -129,7 +129,7 @@ export default function WorkPage() {
                   </Link>
 
                   <Link href={`/work/${projects[1].id}`} className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 ">
                       <div className="overflow-hidden">
                         <Image
                           src={projects[1].image}
@@ -150,7 +150,7 @@ export default function WorkPage() {
                 {/* Row 2: Green Oasis (full width) */}
                 <div className="flex pb-10">
                   <Link href={`/work/${projects[2].id}`} className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 ">
                       <div className="overflow-hidden">
                         <Image
                           src={projects[2].image}
@@ -171,7 +171,7 @@ export default function WorkPage() {
                 {/* Row 3: Rethink (small) + Green Oasis (medium) */}
                 <div className="flex gap-6 pb-10">
                   <Link href={`/work/${projects[3].id}`} className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 ">
                       <div className="overflow-hidden">
                         <Image
                           src={projects[3].image}
@@ -189,7 +189,7 @@ export default function WorkPage() {
                   </Link>
 
                   <Link href={`/work/${projects[4].id}`} className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 ">
                       <div className="overflow-hidden">
                         <Image
                           src={projects[4].image}
@@ -210,7 +210,7 @@ export default function WorkPage() {
                 {/* Row 4: Green Oasis (full width) */}
                 <div className="flex pb-10">
                   <Link href={`/work/${projects[5].id}`} className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 ">
                       <div className="overflow-hidden">
                         <Image
                           src={projects[5].image}
@@ -233,7 +233,7 @@ export default function WorkPage() {
               <div className="grid grid-cols-2 gap-6">
                 {filteredProjects.map((project) => (
                   <Link key={project.id} href={`/work/${project.id}`} className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                    <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 ">
                       <div className="overflow-hidden">
                         <Image
                           src={project.image}
@@ -266,7 +266,7 @@ export default function WorkPage() {
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project) => (
               <Link key={project.id} href={`/work/${project.id}`} className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 hover:shadow-xl">
+                <div className="relative overflow-hidden rounded-lg bg-white transition-all duration-300 ">
                   <div className="overflow-hidden">
                     <Image
                       src={project.image}

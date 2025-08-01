@@ -17,11 +17,11 @@ export default function SwipeCards() {
   const [current, setCurrent] = useState(1);
 
   const prev = () => {
-    setCurrent(1);
+    setCurrent((prev) => (prev === 0 ? cardData.length - 1 : prev - 1));
   };
 
   const next = () => {
-    setCurrent(1);
+    setCurrent((prev) => (prev === cardData.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -33,7 +33,10 @@ export default function SwipeCards() {
       {/* Mobile: vertical stack */}
       {/* Mobile: vertical stack */}
       <div className="relative flex flex-col items-center justify-center sm:hidden">
-        <button className="mb-4 z-10 p-2 hover:scale-105 transition">
+        <button 
+          onClick={prev}
+          className="mb-4 z-10 p-2 hover:scale-105 transition"
+        >
           <Image src="/arrowupmobile.png" alt="up" width={24} height={24} />
         </button>
 
@@ -52,7 +55,7 @@ export default function SwipeCards() {
                 key={card.id}
                 className={`absolute top- left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out transform ${
                   styles[position] || "opacity-0 scale-90"
-                }`}
+                } ${position === 1 ? "brightness-100" : "brightness-75"}`}
               >
                 <Image
                   src={card.url}
@@ -66,7 +69,10 @@ export default function SwipeCards() {
           })}
         </div>
 
-        <button className="mt-4 z-10 p-2 hover:scale-105 transition">
+        <button 
+          onClick={next}
+          className="mt-4 z-10 p-2 hover:scale-105 transition"
+        >
           <Image src="/arrowdownmobile.png" alt="down" width={24} height={24} />
         </button>
       </div>
@@ -95,7 +101,7 @@ export default function SwipeCards() {
                 key={card.id}
                 className={`absolute transition-all duration-500 ease-in-out transform ${
                   styles[position] || "opacity-0 scale-90"
-                } ${position === 1 ? "brightness-100 " : "brightness-100"}`}
+                } ${position === 1 ? "brightness-100" : "brightness-75"}`}
               >
                 <Image
                   src={card.url}

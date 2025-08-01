@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <div className="bg-[#E9DAB6] flex flex-col items-center justify-center md:h-screen border-2 border-amber-700">
+    <div className="bg-[#E9DAB6] flex flex-col items-center justify-center md:h-screen">
       {/* Desktop View */}
       <section className="hidden max-h-screen  md:flex  flex-col items-center justify-center  px-12 pt-12">
         <div className="w-full max-w-[1512px] pl-12 pr-12  flex flex-row items-center justify-between">

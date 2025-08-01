@@ -26,11 +26,11 @@ export default function FeaturedWorkStack() {
               <h1 className=" py-0 md:py-2 text-[#51331B] text-4xl md:text-3xl  lg:text-5xl ">
                 /featured{" "}
                 <span className="relative inline-block">
-                  <span className="relative z-10">work</span>
+                  <span className="relative z-10 font-domine">work</span>
                   <img
                     src="/Vector.png"
                     alt="circle"
-                    className="absolute inset-0 -top-0 left-0 w-full h-full z-0 pointer-events-none"
+                    className="absolute inset-0 scale-[1.25] -top-0 left-0 w-full h-full z-0 pointer-events-none"
                   />
                 </span>
               </h1>

@@ -14,7 +14,7 @@ export default function AbtReachout() {
       <div className="relative h-10 md:h-16 bg-[#AAC7FF] flex items-center overflow-hidden transform -rotate-[1.07deg] -mt-6 z-60">
         <div className="animate-scroll whitespace-nowrap">
           <span className="text-[#51331B] font-regular text-[11px] md:text-lg tracking-[2.7px] md:tracking-[4px]  leading-5 md:leading-8">
-            {scrollText.repeat(3)}
+            {scrollText.repeat(1)}
           </span>
         </div>
       </div>
@@ -77,7 +77,7 @@ export default function AbtReachout() {
           }
         }
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 12s linear infinite;
         }
       `}</style>
     </div>

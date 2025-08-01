@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <>
       <motion.header
-        className="sticky top-0   z-50 flex my-6 justify-center items-center bg-[#FEFCE4]"
+        className="sticky top-0 z-50 flex my-9 justify-center items-center bg-[#FEFCE4]"
         style={{ height: headerHeight }}
       >
         <motion.div className="hidden md:block" style={{ scale: logoScale }}>

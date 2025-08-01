@@ -13,8 +13,8 @@ import Header from "@/components/landing_page/header";
 export default function Home() {
   return (
     <>
-<Header/>
-      <div>
+      <Header />
+      <div className="overflow-x-hidden md:overflow-x-visible">
         <Hero />
         <div className="flex flex-col items-center justify-center text-center pt-10 pb-0">
           <FeaturedWorkStack />

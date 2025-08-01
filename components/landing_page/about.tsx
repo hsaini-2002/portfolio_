@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -49,9 +50,10 @@ const AboutSection = () => {
                 A DESIGN PARTNER, I CRAFT IDENTITIES, PACKAGING, AND
               </p>
               <div className="flex items-center justify-center">
-                <Link href="/">
-                  <button className="border-2 border-[#2C2216] font-semi-bold text-[#2C2216] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
-                    about <span>↗</span>
+                <Link href="/about">
+                  <button className="border-2 border-[#2C2216] font-semi-bold text-[#2C2216] px-4 py-2 text-sm flex items-center gap-2 md:gap-4 hover:bg-[#2C2216] group hover:text-white transition-colors">
+                    <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">about</span>
+                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
                   </button>
                 </Link>
               </div>
