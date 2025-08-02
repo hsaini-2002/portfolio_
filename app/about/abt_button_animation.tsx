@@ -147,7 +147,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Image Section - Full width, no padding, within section boundaries */}
-                <div className="relative w-full h-[60vh] md:h-[60vh] bg-[#40352F] overflow-hidden">
+                <div className="relative w-full h-[75vh] sm:h-[90vh] md:h-[60vh] bg-[#40352F] overflow-hidden">
                     {/* Women portrait image - positioned towards bottom right like in reference */}
                     <div className="absolute inset-0 flex">
                         <Image

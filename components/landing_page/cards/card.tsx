@@ -32,7 +32,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
   };
 
   return (
-    <div className="w-full sm:w-xl md:w-3xl lg:w-6xl flex items-center justify-center sticky overflow-visible px-4 z-[5]" style={{ top: `${NAVBAR_HEIGHT_PX + i * 20}px` }}>
+    <div className="w-full md:w-3xl lg:w-6xl flex items-center justify-center sticky overflow-visible px-4 z-[5]" style={{ top: `${NAVBAR_HEIGHT_PX + i * 20}px` }}>
       <motion.div
         style={{
           scale,

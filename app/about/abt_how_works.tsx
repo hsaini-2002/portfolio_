@@ -25,7 +25,7 @@ export default function AbtWorksWith() {
                   alt="hands" 
                   width={460} 
                   height={184}
-                  className="z-10 scale-80 md:scale-100 absolute top-[-78px] right-[-6px] md:right-[180px] md:top-[-80px]"
+                  className="z-10 scale-80 md:scale-100 absolute top-[-78px] md:right-[180px] md:top-[-80px]"
                 />
               </div>
             </div>

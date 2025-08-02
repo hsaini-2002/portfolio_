@@ -52,11 +52,10 @@ export default function PlayPage() {
             <h1 className="text-[32px] lg:text-5xl text-center lg:text-left font-light leading-[109px] tracking-[-1px] mb-4">
               loved by <span className="font-domine">insiders</span>
             </h1>
-            <p className="max-w-md leading-[25px] text-center lg:text-left text-sm lg:text-lg mx-[15px] lg:mx-0 lg:mr-18">
-              A protein snacking brand based in India, redefining protein snacking in India as a 
-              mission to protein. A protein snacking brand based in India, redefining protein 
-              snacking in India as a mission to protein. A protein snacking brand based in India, 
-              redefining protein.
+            <p className="max-w-5xl leading-[25px] text-center lg:text-left text-sm lg:text-lg mx-[7px] lg:mx-0 lg:mr-18">
+              A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
+              A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
+              A protein snacking brand based in india, redefining proteo
             </p>
           </div>
           
@@ -84,9 +83,9 @@ export default function PlayPage() {
           </h2>
           
           {/* Product Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#2C2216]">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-[#2C2216] overflow-hidden">
+            {products.map((product, index) => (
+              <ProductCard key={product.id} product={product} index={index} totalProducts={products.length} />
             ))}
           </div>
         </div>
@@ -96,12 +95,65 @@ export default function PlayPage() {
   )
 }
 
-function ProductCard({ product }: { product: { id: number; name: string; images: string[]; isLaunching?: boolean } }) {
+function ProductCard({ 
+  product, 
+  index, 
+  totalProducts 
+}: { 
+  product: { id: number; name: string; images: string[]; isLaunching?: boolean }; 
+  index: number; 
+  totalProducts: number; 
+}) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  // Calculate grid dimensions for different screen sizes
+  const getGridInfo = () => {
+    return {
+      mobile: { cols: 1, rows: Math.ceil(totalProducts / 1) },
+      tablet: { cols: 2, rows: Math.ceil(totalProducts / 2) },
+      desktop: { cols: 3, rows: Math.ceil(totalProducts / 3) }
+    }
+  }
+
+  const gridInfo = getGridInfo()
+  
+  // Calculate position in grid for each screen size
+  const getPosition = (cols: number) => ({
+    row: Math.floor(index / cols),
+    col: index % cols,
+    isLastRow: Math.floor(index / cols) === Math.ceil(totalProducts / cols) - 1,
+    isLastCol: (index % cols) === cols - 1
+  })
+
+  const mobilePos = getPosition(gridInfo.mobile.cols)
+  const tabletPos = getPosition(gridInfo.tablet.cols)
+  const desktopPos = getPosition(gridInfo.desktop.cols)
+
+  // Generate border classes - simplified approach
+  const getBorderClasses = () => {
+    const classes = []
+    
+    // Right borders
+    // Mobile: no right borders (1 column)
+    // Tablet: right border for left column only (col 0)
+    // Desktop: right border for first two columns (col 0, 1)
+    if (tabletPos.col === 0) classes.push("md:border-r")
+    if (desktopPos.col === 0 || desktopPos.col === 1) classes.push("lg:border-r")
+    
+    // Bottom borders  
+    // Mobile: bottom border for all except last item
+    // Tablet: bottom border for all except last row
+    // Desktop: bottom border for all except last row
+    if (index < totalProducts - 1) classes.push("border-b")
+    if (tabletPos.isLastRow && index >= totalProducts - 2) classes.push("md:border-b-0")
+    if (desktopPos.isLastRow && index >= totalProducts - 3) classes.push("lg:border-b-0")
+    
+    return `border-[#2C2216] ${classes.join(" ")}`
+  }
 
   return (
     <div 
-      className="border-r border-b border-[#2C2216] p-8 pt-16 text-center relative cursor-pointer transition-all duration-300 [&:nth-child(3n)]:border-r-0 md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(3n)]:border-r-0 md:[&:nth-child(2n+1)]:border-r lg:[&:nth-child(3n+1)]:border-r lg:[&:nth-child(3n+2)]:border-r [&:nth-last-child(-n+3)]:border-b-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
+      className={`p-8 pt-16 text-center relative cursor-pointer transition-all duration-300 ${getBorderClasses()}`}
     >
       {/* Launching Soon Badge */}
       {product.isLaunching && (
@@ -134,9 +186,9 @@ function ProductCard({ product }: { product: { id: number; name: string; images:
       
       {/* Product Info */}
       <div className="pt-4">
-        <button className="overflow-hidden inline-flex justify-center gap-2 lg:gap-4 items-center h-[40px] px-6 py-2 border border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white hover:cursor-pointer transition-colors duration-200 group mt-8 lg:w-auto lg:h-[50px] lg:px-8 lg:py-3"> {/* Adjusted size and padding for mobile, preserved desktop */}
-            <span className="text-base lg:text-xl leading-6 lg:leading-7 tracking-tight">{product.name}</span> {/* Adjusted text size for mobile, preserved desktop */}
-            <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" /> {/* Adjusted icon size for mobile, preserved desktop */}
+        <button className="overflow-hidden inline-flex justify-center gap-2 lg:gap-4 items-center h-[40px] px-6 py-2 border border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white cursor-pointer transition-colors duration-200 group mt-8 lg:w-auto lg:h-[50px] lg:px-8 lg:py-3">
+            <span className="text-base lg:text-xl leading-6 lg:leading-7 tracking-tight">{product.name}</span>
+            <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
         </button>
       </div>
     </div>

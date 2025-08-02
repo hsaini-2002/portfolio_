@@ -68,7 +68,7 @@ export default function Hero() {
       <div className="mt-8 flex flex-row items-center justify-between md:justify-center mx-4 md:mx-24">
         {/* Hero Content */}
         {/* Left Text Column (mobile stacked) */}
-        <div className="flex text-[#2C2216] text-sm md:text-base leading-relaxed mx-1 max-w-[11rem] md:max-w-full lg:mx-18">
+        <div className="flex text-[#2C2216] text-sm md:text-base leading-relaxed mx-1 max-w-[50%] sm:max-w-2xs md:max-w-full lg:mx-18">
           <p>
             I help consumer brands turn ideas into design-driven success. As a
             design partner, I craft identities, packaging, and brand experiences
@@ -78,7 +78,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="flex text-[#2C2216] text-sm md:text-base leading-relaxed max-w-[11rem] md:max-w-full mx-1 lg:mx-18">
+        <div className="flex text-[#2C2216] text-sm md:text-base leading-relaxed max-w-[50%] sm:max-w-2xs md:max-w-full mx-1 sm:mx-8 lg:mx-18">
           <p>
             I help consumer brands turn ideas into design-driven success. As a
             design partner, I craft identities, packaging, and brand experiences

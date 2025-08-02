@@ -76,7 +76,7 @@ export default function Abt_header() {
 
                 <div className="flex flex-col  md:hidden ">
                     <div className="md:hidden   flex  items-center mr-1 justify-end bg-[#FEFCE4] p-2">
-                    <div className="text-2xl  items-center justify-center flex  text-[#2C2216] md:hidden  whitespace-nowrap">
+                    <div className="text-2xl sm:text-3xl sm:mr-46 items-center justify-center flex  text-[#2C2216] md:hidden  whitespace-nowrap">
                         <span className="font-domine pr-2 ">akshita</span>
                         <span className="font-domine">agarwal*</span>
                     </div>

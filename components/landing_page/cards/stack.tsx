@@ -17,12 +17,12 @@ export default function FeaturedWorkStack() {
     <>
       <main
         ref={containerRef}
-        className="relative flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 max-w-7xl mx-auto"
+        className="relative flex flex-col items-center justify-center px-4 md:px-10 max-w-7xl mx-auto"
       >
         <div className="flex flex-col items-center justify-center ">
           <div className="text-left z-10 relative"></div>
           <div>
-            <div className="text-black">
+            <div className="text-black mb-12 md:mb-10">
               <h1 className=" py-0 md:py-2 text-[#51331B] text-4xl md:text-3xl  lg:text-5xl ">
                 /featured{" "}
                 <span className="relative inline-block">
