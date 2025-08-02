@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const LetsBuildBold = () => {
   return (
@@ -63,10 +64,12 @@ const LetsBuildBold = () => {
 
         {/* Button */}
         <div className="relative inline-block mt-12 md:mt-8">
-          <button className="inline-flex items-center px-4 md:px-12 py-2 md:py-3 border border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white transition-colors duration-200 group">
+          <Link href='/contact'>
+            <button className="inline-flex items-center px-4 md:px-12 py-2 md:py-3 border border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white transition-colors duration-200 group cursor-pointer">
               <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">start a project</span>
               <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
             </button>
+          </Link>
         </div>
       </div>
     </section>

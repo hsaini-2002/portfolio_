@@ -9,10 +9,12 @@ const AboutSection = () => {
       <div className="container mx-auto">
         <div className="flex flex-col gap-y-8">
           <div className="flex items-center justify-center pt-4">
-            <button className="border border-[#2C2216] text-[#2C2216] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors group">
-              <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">view work</span>
-              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
-            </button>
+            <Link href="/work">
+              <button className="border border-[#2C2216] text-[#2C2216] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors group cursor-pointer">
+                <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">view work</span>
+                <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+              </button>
+            </Link>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap max-h-xl items-center">
             <div>
@@ -51,7 +53,7 @@ const AboutSection = () => {
               </p>
               <div className="flex items-center justify-center">
                 <Link href="/about">
-                  <button className="border-2 border-[#2C2216] font-semi-bold text-[#2C2216] px-4 py-2 text-sm flex items-center gap-2 md:gap-4 hover:bg-[#2C2216] group hover:text-white transition-colors">
+                  <button className="border-2 border-[#2C2216] font-semi-bold text-[#2C2216] px-4 py-2 text-sm flex items-center gap-2 md:gap-4 hover:bg-[#2C2216] group hover:text-white transition-colors cursor-pointer">
                     <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">about</span>
                     <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
                   </button>

@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function AbtReachout() {
   // Text for the auto-scrolling strip
@@ -58,10 +59,12 @@ export default function AbtReachout() {
                             </div>
                         </div>
 
-                        <button className="inline-flex justify-center gap-2 lg:gap-4 items-center w-[200px] h-[40px] px-6 py-2 border-2 border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white transition-colors duration-200 group mt-8 lg:w-[260px] lg:h-[50px] lg:px-8 lg:py-3"> {/* Adjusted size and padding for mobile, preserved desktop */}
+                        <Link href='/contact'>
+                          <button className="inline-flex justify-center gap-2 lg:gap-4 items-center w-[200px] h-[40px] px-6 py-2 border-2 border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white transition-colors duration-200 group mt-8 lg:w-[260px] lg:h-[50px] lg:px-8 lg:py-3"> {/* Adjusted size and padding for mobile, preserved desktop */}
                             <span className="text-base lg:text-xl leading-6 lg:leading-7 tracking-tight">start a project</span> {/* Adjusted text size for mobile, preserved desktop */}
                             <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" /> {/* Adjusted icon size for mobile, preserved desktop */}
-                        </button>
+                          </button>
+                        </Link>
                     </div>
                 </div>
             </div>

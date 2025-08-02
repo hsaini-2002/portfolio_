@@ -32,14 +32,13 @@ const WorkCard: React.FC<WorkCardProps> = ({
   };
 
   return (
-    <div className=" sm:w-xl md:w-3xl lg:w-6xl flex items-center justify-center sticky  top-0 px-4 z-[5]">
+    <div className="w-full sm:w-xl md:w-3xl lg:w-6xl flex items-center justify-center sticky overflow-visible px-4 z-[5]" style={{ top: `${NAVBAR_HEIGHT_PX + i * 20}px` }}>
       <motion.div
         style={{
           scale,
           transformOrigin: "top",
-          top: `${NAVBAR_HEIGHT_PX}px`,
         }}
-        className="relative transform-gpu"
+        className="relative transform-gpu w-full"
       >
         <div
           className={`h-auto md:p-4 ${card.bgColor} relative px-3 pt-5 pb-3 md:p-5`}
@@ -65,7 +64,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
                   {card.title}
                 </h1>
                 <button 
-                  className="hidden md:block p-2 mt-4 hover:bg-white/10 transition"
+                  className="p-2 mt-4 hover:bg-white/10 transition cursor-pointer"
                   onClick={handleNavigateToProject}
                 >
                   <ArrowRight className={`${card.fontColor} h-5 w-5`} />

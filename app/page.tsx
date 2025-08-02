@@ -14,14 +14,14 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="overflow-x-hidden md:overflow-x-visible">
+      <div className="">
         <Hero />
         <div className="flex flex-col items-center justify-center text-center pt-10 pb-0">
           <FeaturedWorkStack />
         </div>
         <div className="flex justify-center items-center  mt-8">
           <Link href="/work" className="inline-block">
-            <button className="border z-20 border-[#2C2216] text-[#2C2216] px-4  text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors">
+            <button className="border z-20 border-[#2C2216] text-[#2C2216] px-4  text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors cursor-pointer">
 
             </button>
           </Link>
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
         {/* <Video/> */}
         <div className="">
-          <Image src="/gif4x.png" alt="gif" width={1550} height={750} className="w-full"></Image>
+          <Image src="/anime.gif" alt="gif" width={1550} height={750} className="w-full"></Image>
         </div>
       </div>
       <div className="">

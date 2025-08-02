@@ -74,7 +74,7 @@ export default function Header() {
         {/* --- Mobile Header (Static) --- */}
 
         <div className="flex flex-col w-full md:hidden ">
-          <div className="md:hidden w-full h-auto px-4  flex  items-end justify-end">
+          <div className="md:hidden w-full h-auto px-4  flex  items-center justify-end">
             <div>
            
               <Link
@@ -102,32 +102,34 @@ export default function Header() {
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-          <div className="text-[3.2rem]  items-center justify-center  flex    text-[#2C2216] md:hidden  whitespace-nowrap">
+          <div className="text-[3rem]  items-center justify-center  flex    text-[#2C2216] md:hidden  whitespace-nowrap">
             <span className="font-domine  px-3 ">akshita</span> agarwal{" "}
             <span className="font-domine">*</span>
           </div>
         </div>
         {/* --- Mobile Menu --- */}
         {isMenuOpen && (
-          <motion.div
-            className="fixed top-0 left-0 w-full h-screen bg-[#FEFCE4] z-50 flex flex-col items-center justify-center"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-          >
-            <nav className="flex flex-col space-y-6 text-[#2C2216] text-lg font-medium">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </motion.div>
-        )}
+                    <motion.div
+                        className="absolute top-full left-0 w-full bg-[#FEFCE4] border-t border-[#2C2216]/10 shadow-lg z-40"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        <nav className="flex flex-col py-4 px-6">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="py-3 text-[#2C2216] text-lg font-medium border-b border-[#2C2216]/10 last:border-b-0 hover:bg-[#2C2216]/5 transition-colors"
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                        </nav>
+                    </motion.div>
+                )}
       </motion.header>
     </>
   );

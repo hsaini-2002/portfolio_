@@ -35,7 +35,7 @@ export default function SwipeCards() {
       <div className="relative flex flex-col items-center justify-center sm:hidden">
         <button 
           onClick={prev}
-          className="mb-4 z-10 p-2 hover:scale-105 transition"
+          className="mb-4 z-10 p-2 hover:scale-105 transition cursor-pointer"
         >
           <Image src="/arrowupmobile.png" alt="up" width={24} height={24} />
         </button>
@@ -71,7 +71,7 @@ export default function SwipeCards() {
 
         <button 
           onClick={next}
-          className="mt-4 z-10 p-2 hover:scale-105 transition"
+          className="mt-4 z-10 p-2 hover:scale-105 transition cursor-pointer"
         >
           <Image src="/arrowdownmobile.png" alt="down" width={24} height={24} />
         </button>
@@ -81,7 +81,7 @@ export default function SwipeCards() {
       <div className="hidden sm:flex items-center justify-center gap-4 w-full max-w-6xl mx-auto">
         <button
           onClick={prev}
-          className="text-white p-2 hover:scale-105 transition z-10"
+          className="text-white p-2 hover:scale-105 transition z-10 cursor-pointer"
         >
           <Image src="/arrow.png" alt="slider" width={30} height={30} />
         </button>
@@ -117,7 +117,7 @@ export default function SwipeCards() {
 
         <button
           onClick={next}
-          className="text-white p-2 hover:scale-105 transition z-10"
+          className="text-white p-2 hover:scale-105 transition z-10 cursor-pointer"
         >
           <Image src="/arrowr.png" alt="slider" width={30} height={30} />
         </button>

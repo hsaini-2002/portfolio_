@@ -27,7 +27,7 @@ const Marquee = () => {
   ];
 
   return (
-    <div className="container    font-sans flex flex-col my-15 items-center justify-between ">
+    <div className="container font-sans flex flex-col my-15 items-center justify-between overflow-x-hidden md:overflow-x-visible">
       <MarqueeItem images={upperMarquee} from={0} to={"-100%"} />
       <MarqueeItem images={lowerMarquee} from={"-100%"} to={0} />
     </div>
