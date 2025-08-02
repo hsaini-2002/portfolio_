@@ -125,7 +125,6 @@ function ProductCard({
     isLastCol: (index % cols) === cols - 1
   })
 
-  const mobilePos = getPosition(gridInfo.mobile.cols)
   const tabletPos = getPosition(gridInfo.tablet.cols)
   const desktopPos = getPosition(gridInfo.desktop.cols)
 
