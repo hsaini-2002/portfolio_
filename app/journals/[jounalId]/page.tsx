@@ -1,7 +1,7 @@
 "use client"
 
 import { notFound } from 'next/navigation'
-import Navbar from '../jnl_navbar'
+import Navbar from '@/components/navbar';
 
 // Mock data - in a real app, this would come from a database or API
 const journalPosts = [

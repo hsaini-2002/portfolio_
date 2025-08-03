@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Navbar from './jnl_navbar'
+import Navbar from '@/components/navbar';
 
 export default function JournalsPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -79,7 +79,7 @@ export default function JournalsPage() {
             
             {/* Left Sidebar Navigation */}
             <div className="lg:w-[35%] space-y-8">
-              <div className="max-w-sm space-y-6">
+              <div className="max-w-2xl space-y-6">
                 <div>
                   <h2 className="text-3xl lg:text-5xl font-regular leading-[109px] tracking-[-1px] text-[#2C2216] ">
                     /journals
@@ -187,7 +187,7 @@ export default function JournalsPage() {
                                     {article.image}
                                   </div>
                                 </div>
-                                <div className="space-y-4 lg:space-y-2 max-w-sm mb-4 lg:mb-0">
+                                <div className="space-y-4 lg:space-y-2 max-w-2xl mb-4 lg:mb-0">
                                   <p className="text-[13px] lg:text-base text-[#C19570]">{article.date}</p>
                                   <h3 className="text-base lg:text-xl font-domine text-[#2C2216] leading-tight">
                                     {article.title}

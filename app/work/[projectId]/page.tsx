@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Navbar from '../work_navbar';
+import Navbar from '@/components/navbar';
 import { notFound } from 'next/navigation';
 import { motion } from 'framer-motion';
 

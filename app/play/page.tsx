@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
-import Navbar from './play_navbar'
+import Navbar from '@/components/navbar';
 
 export default function PlayPage() {
   const products = [

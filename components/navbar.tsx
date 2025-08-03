@@ -22,10 +22,10 @@ export default function Navbar() {
                 // style={{ height: headerHeight }}
             >
                 <motion.div
-                    className="hidden md:flex absolute top-0 bg-[#FEFCE4] left-0 w-full h-24 px-8 justify-between items-center"
+                    className="hidden md:flex absolute top-0 bg-[#FEFCE4] left-0 w-full h-24 px-4 lg:px-8 justify-between items-center"
                     // style={{ opacity: navOpacity }}
                 >
-                    <nav className="flex space-x-6 text-[#2C2216] text-xl font-medium">
+                    <nav className="flex space-x-6 text-[#2C2216] text-lg lg:text-xl font-medium">
                         {navLinks.map((link) => (
                             <Link key={link.href} href={link.href}>
                                 {link.name}
@@ -33,7 +33,7 @@ export default function Navbar() {
                         ))}
                     </nav>
                 <motion.div className="hidden md:block" >
-                    <Link href="/" className="text-5xl  text-[#2C2216]  whitespace-nowrap">
+                    <Link href="/" className="text-4xl lg:text-5xl  text-[#2C2216]  whitespace-nowrap">
                         <span className="font-domine"> akshita</span>
                         <span> agarwal</span><span className="font-domine">*</span>
                     </Link>
@@ -47,7 +47,7 @@ export default function Navbar() {
                     <div className="flex items-center space-x-4">
                         <Link
                             href="/contact"
-                            className="bg-[#2C2216] text-[#fdf8e2] px-4 py-2 text-lg  flex items-center gap-1"
+                            className="bg-[#2C2216] text-[#fdf8e2] px-3 lg:px-4 py-2 text-base lg:text-lg  flex items-center gap-1"
                         >
                             start a project{" "}
                             <span>
