@@ -63,11 +63,11 @@ export default function PlayPage() {
           <div className="flex justify-center lg:justify-end z-0 pt-18 lg:pt-0">
             <div className="relative right-0">
               <Image
-                src="/side_pic.png"
+                src="/sidepic.png"
                 alt="Client book mockup with golden clip"
                 width={1250}
                 height={400}
-                className="lg:max-w-full lg:max-h-full object-contain h-auto drop-shadow-lg"
+                className="lg:max-w-[1120px] lg:max-h-full object-contain h-auto drop-shadow-lg"
                 priority
               />
             </div>
@@ -165,8 +165,6 @@ function ProductCard({
       
       {/* Product Image with Smooth Transition */}
       <div className="mb-8 h-80 flex items-center justify-center relative overflow-hidden"
-       onMouseEnter={() => setCurrentImageIndex(1)}
-       onMouseLeave={() => setCurrentImageIndex(0)}
        onClick={() => setCurrentImageIndex((prev) => (prev + 1) % product.images.length)}
       >
         {product.images.map((image, index) => (

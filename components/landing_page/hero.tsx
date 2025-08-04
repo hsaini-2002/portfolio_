@@ -11,17 +11,28 @@ export default function Hero() {
       <div>
         {" "}
         <div className=" hidden md:flex text-xs md:text-sm text-[#2C2216] tracking-wider  uppercase border-t border-b border-[#2C2216] py-2 flex flex-wrap justify-center gap-4 ">
-          <span>Brand Strategy</span>
-          <span>|</span>
-          <span>Visual Identity</span>
-          <span>|</span>
-          <span>Packaging Design</span>
-          <span>|</span>
-          <span>Art Direction</span>
-          <span>|</span>
-          <span>UIUX</span>
-          <span>|</span>
-          <span>Publication</span>
+          <Marquee speed={180}>
+            <div>
+              <ul className="flex flex-wrap gap-8">
+                <li >|</li>
+                <li> Brand Strategy</li>
+                <li>|</li>
+                <li> Visual Identity </li>
+                <li>|</li>
+                <li> Brand Strategy </li>
+                <li>|</li>
+                <li> Packaging Design </li>
+                <li>|</li>
+                <li> Art Direction </li>
+                <li>|</li>
+                <li> UIUX </li>
+                <li>|</li>
+                <li> Publication </li>
+                <li>|</li>
+
+              </ul>
+            </div>
+          </Marquee>
         </div>
         <div className="md:hidden text-xs text-[#2C2216] tracking-wider  uppercase border-t border-b border-[#2C2216] py-2  flex flex-wrap justify-center gap-8">
           <Marquee>
@@ -54,7 +65,7 @@ export default function Hero() {
         className="w-auto py-10 hidden sm:flex items-center justify-center text-[#2C2216] text-sm"
         ref={imageRef}
       >
-        <Image src="/hero4x.png" alt="hero" width={1108} height={674} />
+        <Image src="/hero4x.png" alt="hero" width={1108} height={674} className="md:-ml-40" />
       </div>
 
       {/* Middle Image for mobile */}

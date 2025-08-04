@@ -41,7 +41,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
         className="relative transform-gpu w-full"
       >
         <div
-          className={`h-auto md:p-4 ${card.bgColor} relative px-3 pt-5 pb-3 md:p-5`}
+          className={`h-auto md:p-5 ${card.bgColor} relative px-3 pt-5 pb-3`}
         >
           <div className="items-start">
             <div>
@@ -76,11 +76,11 @@ const WorkCard: React.FC<WorkCardProps> = ({
 
           <div className=" ">
             {/* Desktop */}
-            <div className="hidden md:flex">
+            <div className="hidden md:block">
               <Image
                 src={card.image}
                 alt={card.title}
-                width={1028}
+                width={1080}
                 height={638}
               />
             </div>

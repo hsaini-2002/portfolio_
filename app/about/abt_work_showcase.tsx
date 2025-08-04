@@ -219,7 +219,9 @@ export default function WorkShowcase() {
         /* Desktop Layout - Sticky scroll animation */
         <section ref={sectionRef} className="relative h-[300vh]">
           {/* Background (sticky on desktop only) */}
-          <div className="sticky top-0 h-screen w-full overflow-hidden z-0">
+
+          {/* Main Content - Sticky during scroll on desktop only */}
+          <div className="sticky top-0 h-screen z-10 flex items-center justify-center">
             <div 
               className="absolute inset-0 opacity-100"
               style={{
@@ -229,10 +231,6 @@ export default function WorkShowcase() {
                 backgroundRepeat: 'no-repeat'
               }}
             />
-          </div>
-
-          {/* Main Content - Sticky during scroll on desktop only */}
-          <div className="sticky top-0 h-screen z-10 flex items-center justify-center">
             <div className="relative w-full max-w-7xl right-4">
               {/* Background Text */}
               <div className="absolute flex items-center justify-center pointer-events-none">

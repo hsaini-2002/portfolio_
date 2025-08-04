@@ -12,9 +12,9 @@ import Abt_work_showcase from './abt_work_showcase'
 
 const AbtHome = () => {
   return (
-    <div className="overflow-x-hidden md:overflow-x-visible">
       <div>
         <Navbar />
+        <div className="overflow-x-hidden md:overflow-x-visible">
         <Abt_hero />
         <Abt_button_animation />
         <Abt_core_values />
