@@ -7,7 +7,7 @@ export default function HeroSection() {
     <div className="bg-[#E9DAB6] flex flex-col items-center justify-center md:h-screen">
       {/* Desktop View */}
       <section className="hidden max-h-screen  md:flex  flex-col items-center justify-center  px-12 pt-12">
-        <div className="w-full max-w-[1512px] pl-12 pr-12  flex flex-row items-center justify-between">
+        <div className="w-full max-w-[1512px] pl-12 flex flex-row items-center justify-between">
           {/* Left Image */}
           <div className="relative w-[320px] h-[410px] -mb-28">
             <Image
@@ -20,7 +20,7 @@ export default function HeroSection() {
           </div>
 
           {/* Center Text */}
-          <div className="flex flex-col pl-16   justify-end space-around h-full   items-center    text-center max-w-2xl">
+          <div className="flex flex-col pl-16 justify-end space-around h-full items-center text-center max-w-2xl">
             <h1 className="text-6xl  font-domine font-light text-[#9F8267] leading-tight">
               design<span className="font-sans"> /details </span>that<br />
               feel like magic
@@ -44,7 +44,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image */}
-          <div className="relative items-start mb-30">
+          <div className="relative items-start mb-30 -mr-11">
             <Image
               src="/gif32.gif"
               alt="Phone call"
