@@ -10,11 +10,11 @@ export default function Hero() {
     <section className="bg-[#FEFCE4] w-full  py-5">
       <div>
         {" "}
-        <div className=" hidden md:flex text-xs md:text-sm text-[#2C2216] tracking-wider  uppercase border-t border-b border-[#2C2216] py-2 flex flex-wrap justify-center gap-4 ">
+        <div className=" hidden md:flex text-xs md:text-sm text-[#2C2216] tracking-wider  uppercase border-t border-b border-[#2C2216] py-2 flex-wrap justify-center gap-4 ">
           <Marquee speed={180}>
             <div>
-              <ul className="flex flex-wrap gap-8">
-                <li >|</li>
+              <ul className="flex flex-wrap gap-14">
+                <li ></li>
                 <li> Brand Strategy</li>
                 <li>|</li>
                 <li> Visual Identity </li>

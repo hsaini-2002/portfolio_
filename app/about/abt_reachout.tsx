@@ -12,9 +12,9 @@ export default function AbtReachout() {
   return (
     <div className="">
       {/* Auto-scrolling angled text strip */}
-      <div className="relative h-10 md:h-16 bg-[#AAC7FF] flex items-center overflow-hidden transform -rotate-[1.07deg] -mt-6 z-60">
+      <div className="relative h-10 lg:h-16 bg-[#AAC7FF] flex items-center overflow-hidden transform -rotate-[1.07deg] -mt-6 z-60">
         <div className="animate-scroll whitespace-nowrap">
-          <span className="text-[#51331B] font-regular text-[11px] md:text-lg tracking-[2.7px] md:tracking-[4px]  leading-5 md:leading-8">
+          <span className="text-[#51331B] font-regular text-[11px] lg:text-lg tracking-[2.7px] lg:tracking-[4px]  leading-5 lg:leading-8">
             {scrollText.repeat(1)}
           </span>
         </div>
@@ -42,7 +42,7 @@ export default function AbtReachout() {
                     {/* Header and Button Group */}
                     <div className="flex flex-col items-center">
                         <div className="relative z-50 text-center"> {/* Added text-center for mobile alignment */}
-                            <h2 className="text-[38px] min-[470px]:ml-16 lg:text-[64px] leading-[34px] md:leading-[109px] font-regular text-[#51331B] mb-4 lg:mb-0"> {/* Adjusted font size for mobile, preserved desktop */}
+                            <h2 className="text-[38px] min-[470px]:ml-16 lg:text-[64px] leading-[34px] lg:leading-[109px] font-regular text-[#51331B] mb-4 lg:mb-0"> {/* Adjusted font size for mobile, preserved desktop */}
                                 Reach out now
                             </h2>
                             

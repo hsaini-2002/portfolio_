@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <div className="bg-[#E9DAB6] flex flex-col items-center justify-center md:h-screen">
+    <div className="bg-[#E9DAB6] flex flex-col items-center justify-center lg:h-screen">
       {/* Desktop View */}
-      <section className="hidden max-h-screen  md:flex  flex-col items-center justify-center  px-12 pt-12">
+      <section className="hidden max-h-screen  lg:flex  flex-col items-center justify-center  px-12 pt-12">
         <div className="w-full max-w-[1512px] pl-12 flex flex-row items-center justify-between">
           {/* Left Image */}
           <div className="relative w-[320px] h-[410px] -mb-28">
@@ -57,7 +57,7 @@ export default function HeroSection() {
       </section>
 
       {/* Mobile View */}
-      <section className=" md:hidden flex-col items-start justify-end px-6 py-12">
+      <section className=" lg:hidden flex-col items-start justify-end px-6 py-12">
         {/* Top Image */}
         <div className="relative  my-12  flex ">
           <Image

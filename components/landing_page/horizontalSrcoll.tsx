@@ -24,15 +24,15 @@ const HorizontalScroll = () => {
   return (
     <section ref={sectionRef} className="relative h-[200vh]   ">
       {/* Sticky Heading */}
-      <div className="sticky top-0 md:h-screen flex flex-col justify-between mt-20 md:mt-0 p-5 md:p-20 z-10">
-        <h1 className="text-[#51331B] text-[40px] md:text-7xl leading-tight z-0">
+      <div className="sticky top-0 lg:h-screen flex flex-col justify-between mt-20 lg:mt-0 p-5 lg:p-20 z-10">
+        <h1 className="text-[#51331B] text-[40px] lg:text-7xl leading-tight z-0">
           /brand identities <br />
           that drive <span className="font-domine"> success</span>
         </h1>
-        <div className="md:mt-10 relative z-50">
+        <div className="lg:mt-10 relative z-50">
           <Link href="/work">
             <button className="border m-10 border-[#51331B] text-[#51331B] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#51331B] hover:text-white transition-colors group cursor-pointer relative z-50">
-              <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">view work</span>
+              <span className="mr-2 font-regular text-base lg:text-xl leading-6 lg:leading-7 tracking-tight">view work</span>
               <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
             </button>
           </Link>
@@ -41,15 +41,15 @@ const HorizontalScroll = () => {
 
       {/* Scrollable Cards */}
       <div className="absolute top-0 h-full w-full pointer-events-none z-20">
-        <div className="sticky top-0 h-screen flex p-5 md:p-20 overflow-hidden">
+        <div className="sticky top-0 h-screen flex p-5 lg:p-20 overflow-hidden">
           <motion.div
             style={{ x }}
-            className="flex gap-4 md:gap-12 px-5 md:px-20 relative items-center md:items-start z-20 pointer-events-none"
+            className="flex gap-4 lg:gap-12 px-5 lg:px-20 relative items-center lg:items-start z-20 pointer-events-none"
           >
             {cards.map((card, index) => (
               <div
                 key={card.id}
-                className={`relative mt-5 pointer-events-auto ${index % 2 === 0 ? 'md:top-0' : 'md:top-[300px]'}`}
+                className={`relative mt-5 pointer-events-auto ${index % 2 === 0 ? 'lg:top-0' : 'lg:top-[300px]'}`}
               >
                 <Card card={card} index={index} />
               </div>
@@ -75,7 +75,7 @@ const Card = ({ card, index }: { card: CardType; index: number }) => {
 
   return (
     <div 
-      className="rounded-xl overflow-hidden shadow-md bg-white w-[180px] h-[180px] md:h-[var(--desktop-height)] md:w-[var(--desktop-width)]"
+      className="rounded-xl overflow-hidden shadow-md bg-white w-[180px] h-[180px] lg:h-[var(--desktop-height)] lg:w-[var(--desktop-width)]"
       style={{ 
         '--desktop-height': `${h}px`, 
         '--desktop-width': `${w}px` 

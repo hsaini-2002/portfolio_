@@ -41,11 +41,11 @@ export default function Navbar() {
     return (
         <>
             <motion.header
-                className="top-0 z-50 flex justify-center items-center relative"
+                className="sticky top-0 z-50 flex justify-center items-center bg-[#FEFCE4]"
                 style={{ y: navbarY }}
             >
                 <motion.div
-                    className="hidden md:flex absolute top-0 bg-[#FEFCE4] left-0 w-full h-24 px-4 lg:px-8 justify-between items-center"
+                    className="hidden lg:flex absolute top-0 bg-[#FEFCE4] left-0 w-full h-24 px-4 lg:px-8 justify-between items-center"
                     // style={{ opacity: navOpacity }}
                 >
                     <nav className="flex space-x-6 text-[#2C2216] text-lg lg:text-xl font-medium">
@@ -60,7 +60,7 @@ export default function Navbar() {
                             </Link>
                         ))}
                     </nav>
-                    <motion.div className="hidden md:block" >
+                    <motion.div className="hidden lg:block" >
                       <Link href="/" className="text-4xl lg:text-5xl  text-[#2C2216]  whitespace-nowrap">
                         <span className="font-domine"> akshita</span>
                         <span> agarwal</span><span className="font-domine">*</span>
@@ -89,9 +89,9 @@ export default function Navbar() {
 
                 {/* --- Mobile Header (Static) --- */}
 
-                <div className="flex flex-col w-full md:hidden ">
-                    <div className="md:hidden flex items-center justify-between bg-[#FEFCE4] p-2">
-                        <Link href="/" className="text-2xl min-[425px]:text-3xl min-[475px]:ml-[5%] items-center justify-center flex text-[#2C2216] md:hidden whitespace-nowrap">
+                <div className="flex flex-col w-full lg:hidden ">
+                    <div className="lg:hidden flex items-center justify-between bg-[#FEFCE4] p-2">
+                        <Link href="/" className="text-2xl min-[425px]:text-3xl min-[475px]:ml-[5%] items-center justify-center flex text-[#2C2216] lg:hidden whitespace-nowrap">
                             <span className="font-domine pr-2">akshita</span>
                             <span className="font-domine">agarwal*</span>
                         </Link>

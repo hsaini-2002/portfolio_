@@ -14,7 +14,7 @@ const AbtHome = () => {
   return (
       <div>
         <Navbar />
-        <div className="overflow-x-hidden md:overflow-x-visible">
+        <div className="overflow-x-hidden lg:overflow-x-visible">
         <Abt_hero />
         <Abt_button_animation />
         <Abt_core_values />

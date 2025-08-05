@@ -39,14 +39,14 @@ const ScrollCarousel = () => {
                 alt={card.title}
                 width={300}
                 height={300}
-                className="md:hidden"
+                className="lg:hidden"
               />
               <Image
                 src={card.url}
                 alt={card.title}
                 width={400}
                 height={400}
-                className="hidden md:flex"
+                className="hidden lg:flex"
               />
             </div>
           ))}

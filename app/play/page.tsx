@@ -48,11 +48,11 @@ export default function PlayPage() {
       <section className="relative bg-[#2C2216] py-16 lg:py-24">
         <div className="lg:w-full mx-auto flex flex-col lg:flex-row">
           {/* Left Content */}
-          <div className="text-[#AAC7FF] mt-8 lg:mt-16 lg:ml-36 z-10">
+          <div className="text-[#AAC7FF] mt-8 lg:mt-16 lg:ml-26 z-10">
             <h1 className="text-[32px] lg:text-5xl text-center lg:text-left font-light leading-[109px] tracking-[-1px] mb-4">
               loved by <span className="font-domine">insiders</span>
             </h1>
-            <p className="max-w-5xl leading-[25px] text-center lg:text-left text-sm lg:text-lg mx-[7px] lg:mx-0 lg:mr-18">
+            <p className="max-w-5xl leading-[25px] text-center lg:text-left text-sm lg:text-lg mx-[7px] lg:mx-0 lg:mr-4">
               A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
               A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
               A protein snacking brand based in india, redefining proteo
@@ -67,7 +67,7 @@ export default function PlayPage() {
                 alt="Client book mockup with golden clip"
                 width={1250}
                 height={400}
-                className="lg:max-w-[1120px] lg:max-h-full object-contain h-auto drop-shadow-lg"
+                className="lg:max-w-[1030px] lg:max-h-full object-contain h-auto drop-shadow-lg"
                 priority
               />
             </div>

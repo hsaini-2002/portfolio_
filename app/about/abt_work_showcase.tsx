@@ -71,7 +71,7 @@ export default function WorkShowcase() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024);
     };
     
     checkMobile();
@@ -122,7 +122,7 @@ export default function WorkShowcase() {
   };
 
   return (
-    <div className="relative h-[450px] md:h-[300vh]">
+    <div className="relative h-[450px] lg:h-[300vh]">
       {/* Mobile Layout - Simple container */}
       {isMobile ? (
         <div 

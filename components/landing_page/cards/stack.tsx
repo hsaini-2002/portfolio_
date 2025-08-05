@@ -22,8 +22,8 @@ export default function FeaturedWorkStack() {
         <div className="flex flex-col items-center justify-center ">
           <div className="text-left z-10 relative"></div>
           <div>
-            <div className="text-black mb-6 md:mb-10">
-              <h1 className=" py-0 md:py-2 text-[#51331B] text-4xl md:text-3xl  lg:text-5xl ">
+            <div className="text-black mb-6 lg:mb-10">
+              <h1 className=" py-0 lg:py-2 text-[#51331B] text-4xl md:text-3xl  lg:text-5xl ">
                 /featured{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10 font-domine">work</span>

@@ -32,7 +32,7 @@ export default function SwipeCards() {
 
       {/* Mobile: vertical stack */}
       {/* Mobile: vertical stack */}
-      <div className="relative flex flex-col items-center justify-center md:hidden">
+      <div className="relative flex flex-col items-center justify-center lg:hidden">
         <button 
           onClick={prev}
           className="mb-4 z-10 p-2 hover:scale-105 transition cursor-pointer"
@@ -78,7 +78,7 @@ export default function SwipeCards() {
       </div>
 
       {/* Desktop: horizontal cards (your existing layout) */}
-      <div className="hidden md:flex items-center justify-center gap-4 w-full max-w-6xl mx-auto">
+      <div className="hidden lg:flex items-center justify-center gap-4 w-full max-w-6xl mx-auto">
         <button
           onClick={prev}
           className="text-white p-2 hover:scale-105 transition z-10 cursor-pointer"

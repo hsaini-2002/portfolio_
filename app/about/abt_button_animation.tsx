@@ -14,7 +14,7 @@ export default function HeroSection() {
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
     return (
-        <section ref={ref} className="w-full h-auto md:h-screen text-white">
+        <section ref={ref} className="w-full h-auto lg:h-screen text-white">
             {/* Desktop Layout */}
             <div className="hidden lg:flex h-full relative">
                 
@@ -89,20 +89,20 @@ export default function HeroSection() {
             {/* Mobile Layout */}
             <div className="lg:hidden h-auto bg-[#40352F] text-white flex flex-col mb-16 md:mb-20">
                 {/* Content with padding */}
-                <div className="px-4 md:px-6 py-6 md:py-8 relative">
+                <div className="px-4 lg:px-6 py-6 lg:py-8 relative">
                     {/* Main Heading */}
-                    <div className="mb-6 md:mb-8">
+                    <div className="mb-6 lg:mb-8">
                         <h1 className="text-[#AAC7FF] text-2xl md:text-3xl lg:text-4xl font-domine leading-tight tracking-[-0.57px] font-normal">
                             the idea of design is <br /> shifting. it&apos;s dynamic <br /> than ever.
                         </h1>
                     </div>
 
                     {/* Two Column Layout - Mobile */}
-                    <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-8">
+                    <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8">
                         {/* Left Column */}
                         <div className="flex flex-col">
                             {/* Horizontal line */}
-                            <div className="border-t border-[#AAC7FF] w-full mb-2 md:mb-3"></div>
+                            <div className="border-t border-[#AAC7FF] w-full mb-2 lg:mb-3"></div>
                             
                             {/* Section heading */}
                             <h2 className="text-xs md:text-sm lg:text-base font-semibold uppercase text-[#AAC7FF] leading-4 md:leading-5 lg:leading-6 mb-2 md:mb-3">The Design Game</h2>
@@ -147,7 +147,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Image Section - Full width, no padding, within section boundaries */}
-                <div className="relative w-full h-[75vh] sm:h-[90vh] md:h-[60vh] bg-[#40352F] overflow-hidden">
+                <div className="relative w-full h-[75vh] sm:h-[90vh] md:h-[100vh] lg:h-[60vh] bg-[#40352F] overflow-hidden">
                     {/* Women portrait image - positioned towards bottom right like in reference */}
                     <div className="absolute inset-0 flex">
                         <Image
