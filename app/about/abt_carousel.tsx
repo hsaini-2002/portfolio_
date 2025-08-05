@@ -70,9 +70,9 @@ export default function AbtCarousel() {
         {/* View Work Button */}
         <div className="text-center mt-18 lg:mt-32 mb-32">
           <Link href="/work">
-            <button className="inline-flex items-center px-8 py-3 border-2 border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white transition-colors duration-200 group">
+            <button className="inline-flex items-center px-8 py-3 border-2 border-[#51331B] text-[#51331B] active:bg-[#51331B] active:text-white lg:hover:bg-[#51331B] lg:hover:text-white transition-colors duration-200 group">
               <span className="mr-2 text-lg">view work</span>
-              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+              <ArrowUpRight className="w-5 h-5 group-active:translate-x-1 group-active:-translate-y-1 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-transform duration-200" />
             </button>
           </Link>
         </div>

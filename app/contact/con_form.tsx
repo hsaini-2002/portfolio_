@@ -194,10 +194,10 @@ export default function ContactForm() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="flex items-center space-x-2 mt-12 lg:mt-16 px-6 lg:px-8 py-3 border border-[#FEFCE4] text-[#FEFCE4] hover:bg-[#FEFCE4] hover:text-[#40352F] transition-colors duration-300 group"
+            className="flex items-center space-x-2 mt-12 lg:mt-16 px-6 lg:px-8 py-3 border border-[#FEFCE4] text-[#FEFCE4] active:bg-[#FEFCE4] active:text-[#40352F] lg:hover:bg-[#FEFCE4] lg:hover:text-[#40352F] transition-colors duration-300 group"
           >
             <span className='text-lg lg:text-xl'>submit</span>
-            <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+            <ArrowUpRight className="w-5 h-5 group-active:translate-x-1 group-active:-translate-y-1 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-transform duration-200" />
           </button>
         </form>
         {/* Envelope Illustration - Mobile View */}

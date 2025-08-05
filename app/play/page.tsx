@@ -48,11 +48,11 @@ export default function PlayPage() {
       <section className="relative bg-[#2C2216] py-16 lg:py-24">
         <div className="lg:w-full mx-auto flex flex-col lg:flex-row">
           {/* Left Content */}
-          <div className="text-[#AAC7FF] mt-8 lg:mt-16 lg:ml-26 z-10">
+          <div className="text-[#AAC7FF] mt-8 lg:mt-16 lg:ml-36 z-10">
             <h1 className="text-[32px] lg:text-5xl text-center lg:text-left font-light leading-[109px] tracking-[-1px] mb-4">
               loved by <span className="font-domine">insiders</span>
             </h1>
-            <p className="max-w-5xl leading-[25px] text-center lg:text-left text-sm lg:text-lg mx-[7px] lg:mx-0 lg:mr-4">
+            <p className="max-w-5xl leading-[25px] text-center lg:text-left text-sm lg:text-lg mx-[7px] lg:mx-0 lg:mr-18">
               A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
               A protein snacking brand based in india, redefining proteon snacking in india as a mission to protein. 
               A protein snacking brand based in india, redefining proteo
@@ -67,7 +67,7 @@ export default function PlayPage() {
                 alt="Client book mockup with golden clip"
                 width={1250}
                 height={400}
-                className="lg:max-w-[1030px] lg:max-h-full object-contain h-auto drop-shadow-lg"
+                className="lg:max-w-[1120px] lg:max-h-full object-contain h-auto drop-shadow-lg"
                 priority
               />
             </div>
@@ -183,9 +183,9 @@ function ProductCard({
       
       {/* Product Info */}
       <div className="pt-4">
-        <button className="overflow-hidden inline-flex justify-center gap-2 lg:gap-4 items-center h-[40px] px-6 py-2 border border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white cursor-pointer transition-colors duration-200 group mt-8 lg:w-auto lg:h-[50px] lg:px-8 lg:py-3">
+        <button className="overflow-hidden inline-flex justify-center gap-2 lg:gap-4 items-center h-[40px] px-6 py-2 border border-[#51331B] text-[#51331B] active:bg-[#51331B] active:text-white lg:hover:bg-[#51331B] lg:hover:text-white cursor-pointer transition-colors duration-200 group mt-8 lg:w-auto lg:h-[50px] lg:px-8 lg:py-3">
             <span className="text-base lg:text-xl leading-6 lg:leading-7 tracking-tight">{product.name}</span>
-            <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+            <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 group-active:translate-x-1 group-active:-translate-y-1 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-transform duration-200" />
         </button>
       </div>
     </div>

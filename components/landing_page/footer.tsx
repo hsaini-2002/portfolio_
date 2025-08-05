@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 const HeroBanner = () => {
@@ -18,12 +17,12 @@ const HeroBanner = () => {
 
         <div className="absolute left-1/2 top-[17%] md:top-[20%] lg:top-[35%] transform -translate-x-1/2 -translate-y-37 z-2">
           <div className=" ">
-            <Image
+            <img
               src="/moniter.png"
               alt="Monitor"
               width={500}
               height={30}
-              className="max-[1024px]:max-w-sm md:scale-100"
+              className="max-[1024px]:max-w-sm md:scale-100 overflow-visible"
             />
           </div>
         </div>

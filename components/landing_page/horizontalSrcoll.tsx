@@ -31,9 +31,9 @@ const HorizontalScroll = () => {
         </h1>
         <div className="lg:mt-10 relative z-50">
           <Link href="/work">
-            <button className="border m-10 border-[#51331B] text-[#51331B] px-4 py-2 text-sm flex items-center gap-2 hover:bg-[#51331B] hover:text-white transition-colors group cursor-pointer relative z-50">
+            <button className="border m-10 border-[#51331B] text-[#51331B] px-4 py-2 text-sm flex items-center gap-2 active:bg-[#51331B] active:text-white lg:hover:bg-[#51331B] lg:hover:text-white transition-colors group cursor-pointer relative z-50">
               <span className="mr-2 font-regular text-base lg:text-xl leading-6 lg:leading-7 tracking-tight">view work</span>
-              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+              <ArrowUpRight className="w-5 h-5 group-active:translate-x-1 group-active:-translate-y-1 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-transform duration-200" />
             </button>
           </Link>
         </div>

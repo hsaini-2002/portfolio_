@@ -45,7 +45,7 @@ export default function Navbar() {
                 style={{ y: navbarY }}
             >
                 <motion.div
-                    className="hidden lg:flex absolute top-0 bg-[#FEFCE4] left-0 w-full h-24 px-4 lg:px-8 justify-between items-center"
+                    className="hidden lg:flex absolute top-0 bg-[#FEFCE4] left-0 w-full h-24 px-4 lg:px-8 items-center"
                     // style={{ opacity: navOpacity }}
                 >
                     <nav className="flex space-x-6 text-[#2C2216] text-lg font-medium">
@@ -60,15 +60,17 @@ export default function Navbar() {
                             </Link>
                         ))}
                     </nav>
-                    <motion.div className="hidden lg:block" >
-                      <Link href="/" className="text-4xl lg:text-5xl text-[#2C2216]  whitespace-nowrap">
+                    
+                    {/* Centered name - positioned absolutely to center on screen */}
+                    <motion.div className="absolute left-1/2 transform -translate-x-1/2" >
+                      <Link href="/" className="text-4xl lg:text-5xl text-[#2C2216] whitespace-nowrap">
                         <span className="font-domine"> akshita</span>
                         <span> agarwal</span><span className="font-domine">*</span>
                       </Link>
                     </motion.div>
 
-                    {/* Right: CTA Button */}
-                    <div className="flex items-center space-x-4">
+                    {/* Right: CTA Button - positioned absolutely to extreme right */}
+                    <div className="absolute right-4 lg:right-8 flex items-center space-x-4">
                         <Link
                             href="/contact"
                             className="bg-[#2C2216] text-[#fdf8e2] px-3 lg:px-4 py-2 text-base lg:text-lg  flex items-center gap-1"
@@ -93,7 +95,7 @@ export default function Navbar() {
                     <div className="lg:hidden flex items-center justify-between bg-[#FEFCE4] p-2">
                         <Link href="/" className="text-2xl min-[425px]:text-3xl min-[475px]:ml-[5%] items-center justify-center flex text-[#2C2216] lg:hidden whitespace-nowrap">
                             <span className="font-domine pr-2">akshita</span>
-                            <span className="font-domine">agarwal*</span>
+                            <span> agarwal</span><span className="font-domine">*</span>
                         </Link>
                         
                         {/* Right: CTA Button & Menu Icon together */}

@@ -56,7 +56,7 @@ export default function Header() {
         }}
       >
         <motion.div className="hidden lg:block" style={{ scale: logoScale }}>
-          <Link href="/" className="text-lg lg:text-xl text-[#2C2216] whitespace-nowrap">
+          <Link href="/" className="text-xl lg:text-2xl text-[#2C2216] whitespace-nowrap">
             <span className="font-domine"> akshita</span>
             <span> agarwal</span><span className="font-domine">*</span>
           </Link>
@@ -64,7 +64,7 @@ export default function Header() {
 
         {/* Navigation & CTA: Absolutely positioned and fade in on scroll */}
         <motion.div
-          className="hidden lg:flex absolute top-0 left-0 w-full h-20 px-4 lg:px-8 justify-between items-center"
+          className="hidden lg:flex absolute top-0 left-0 w-full h-24 px-4 lg:px-8 justify-between items-center"
           style={{ opacity: navOpacity }}
         >
           {/* Left: Nav links */}
@@ -107,7 +107,7 @@ export default function Header() {
             <div className="lg:hidden flex items-center justify-between bg-[#FEFCE4] p-2">
                 <Link href="/" className="text-2xl min-[425px]:text-3xl min-[475px]:ml-[5%] items-center justify-center flex  text-[#2C2216] lg:hidden  whitespace-nowrap">
                     <span className="font-domine pr-2 ">akshita</span>
-                    <span className="font-domine">agarwal*</span>
+                    <span> agarwal</span><span className="font-domine">*</span>
                 </Link>
                 <div className="flex items-center gap-4">
                   <Link

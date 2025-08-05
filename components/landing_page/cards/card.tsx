@@ -41,7 +41,8 @@ const WorkCard: React.FC<WorkCardProps> = ({
         className="relative transform-gpu w-full"
       >
         <div
-          className={`h-auto md:p-5 ${card.bgColor} relative px-3 pt-5 pb-3`}
+          className={`h-auto md:p-5 ${card.bgColor} relative px-3 pt-5 pb-3 cursor-pointer`}
+          onClick={handleNavigateToProject}
         >
           <div className="items-start">
             <div>
@@ -63,12 +64,9 @@ const WorkCard: React.FC<WorkCardProps> = ({
                 >
                   {card.title}
                 </h1>
-                <button 
-                  className="p-2 mt-4 hover:bg-white/10 transition cursor-pointer"
-                  onClick={handleNavigateToProject}
-                >
+                <div className="p-2 mt-4 hover:bg-white/10 transition">
                   <ArrowRight className={`${card.fontColor} h-5 w-5`} />
-                </button>
+                </div>
               </div>
             </div>
             <div className=""></div>

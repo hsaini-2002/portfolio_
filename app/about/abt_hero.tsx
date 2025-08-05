@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <div className="bg-[#E9DAB6] flex flex-col items-center justify-center lg:h-screen">
       {/* Desktop View */}
-      <section className="hidden max-h-screen  lg:flex  flex-col items-center justify-center  px-12 pt-12">
+      <section className="hidden max-h-screen max-[1024px]:scale-[1] max-[1400px]:scale-[0.8] lg:flex  flex-col items-center justify-center  px-12 pt-12">
         <div className="w-full max-w-[1512px] pl-12 flex flex-row items-center justify-between">
           {/* Left Image */}
           <div className="relative w-[320px] h-[410px] -mb-28">

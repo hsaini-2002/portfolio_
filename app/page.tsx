@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center items-center  mt-8">
           <Link href="/work" className="inline-block">
-            <button className="border z-20 border-[#2C2216] text-[#2C2216] px-4  text-sm flex items-center gap-2 hover:bg-[#2C2216] hover:text-white transition-colors cursor-pointer">
+            <button className="border z-20 border-[#2C2216] text-[#2C2216] px-4  text-sm flex items-center gap-2 active:bg-[#2C2216] active:text-white lg:hover:bg-[#2C2216] lg:hover:text-white transition-colors cursor-pointer">
 
             </button>
           </Link>

@@ -42,7 +42,7 @@ export default function AbtReachout() {
                     {/* Header and Button Group */}
                     <div className="flex flex-col items-center">
                         <div className="relative z-50 text-center"> {/* Added text-center for mobile alignment */}
-                            <h2 className="text-[38px] min-[470px]:ml-16 lg:text-[64px] leading-[34px] lg:leading-[109px] font-regular text-[#51331B] mb-4 lg:mb-0"> {/* Adjusted font size for mobile, preserved desktop */}
+                            <h2 className="text-[38px] min-[470px]:ml-16 lg:ml-0 lg:text-[64px] leading-[34px] lg:leading-[109px] font-regular text-[#51331B] mb-4 lg:mb-0"> {/* Adjusted font size for mobile, preserved desktop */}
                                 Reach out now
                             </h2>
                             
@@ -60,9 +60,9 @@ export default function AbtReachout() {
                         </div>
 
                         <Link href='/contact'>
-                          <button className="inline-flex justify-center gap-2 lg:gap-4 items-center w-[200px] h-[40px] px-6 py-2 border-2 border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white transition-colors duration-200 group mt-8 lg:w-[260px] lg:h-[50px] lg:px-8 lg:py-3"> {/* Adjusted size and padding for mobile, preserved desktop */}
+                          <button className="inline-flex justify-center gap-2 lg:gap-4 items-center w-[200px] h-[40px] px-6 py-2 border-2 border-[#51331B] text-[#51331B] active:bg-[#51331B] active:text-white lg:hover:bg-[#51331B] lg:hover:text-white transition-colors duration-200 group mt-8 lg:w-[260px] lg:h-[50px] lg:px-8 lg:py-3"> {/* Adjusted size and padding for mobile, preserved desktop */}
                             <span className="text-base lg:text-xl leading-6 lg:leading-7 tracking-tight">start a project</span> {/* Adjusted text size for mobile, preserved desktop */}
-                            <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" /> {/* Adjusted icon size for mobile, preserved desktop */}
+                            <ArrowUpRight className="w-4 h-4 lg:w-5 lg:h-5 group-active:translate-x-1 group-active:-translate-y-1 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-transform duration-200" /> {/* Adjusted icon size for mobile, preserved desktop */}
                           </button>
                         </Link>
                     </div>

@@ -14,14 +14,14 @@ export default function HeroSection() {
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
     return (
-        <section ref={ref} className="w-full h-auto lg:h-screen text-white">
+        <section ref={ref} className="w-full h-auto min-[1400px]:h-screen text-white">
             {/* Desktop Layout */}
             <div className="hidden lg:flex h-full relative">
                 
                 <div className="flex-1 bg-[#40352F] px-20 py-15 flex flex-col">
                     {/* Main Heading */}
                     <div className="mb-16">
-                        <h1 className="text-[#AAC7FF] text-6xl font-domine leading-18 tracking-[-0.57px] font-normal">
+                        <h1 className="text-[#AAC7FF] text-5xl min-[1400px]:text-6xl font-domine leading-18 tracking-[-0.57px] font-normal">
                             the idea of design is <br /> shifting. it’s dynamic <br /> than ever.
                         </h1>
                     </div>

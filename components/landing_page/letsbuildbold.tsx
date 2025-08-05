@@ -65,9 +65,9 @@ const LetsBuildBold = () => {
         {/* Button */}
         <div className="relative inline-block mt-12 md:mt-8">
           <Link href='/contact'>
-            <button className="inline-flex items-center px-4 md:px-12 py-2 md:py-3 border border-[#51331B] text-[#51331B] hover:bg-[#51331B] hover:text-white transition-colors duration-200 group cursor-pointer">
+            <button className="inline-flex items-center px-4 md:px-12 py-2 md:py-3 border border-[#51331B] text-[#51331B] active:bg-[#51331B] active:text-white lg:hover:bg-[#51331B] lg:hover:text-white transition-colors duration-200 group cursor-pointer">
               <span className="mr-2 font-regular text-base md:text-xl leading-6 md:leading-7 tracking-tight">start a project</span>
-              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+              <ArrowUpRight className="w-5 h-5 group-active:translate-x-1 group-active:-translate-y-1 lg:group-hover:translate-x-1 lg:group-hover:-translate-y-1 transition-transform duration-200" />
             </button>
           </Link>
         </div>
