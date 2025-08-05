@@ -82,7 +82,7 @@ export default function AbtFeatures() {
 
       {/* Foreground content pinned while scrolling */}
       <div className="sticky top-0 h-screen z-10 flex flex-col justify-center items-center px-4">
-        <div className="max-w-6xl w-full">
+        <div className="max-w-6xl w-full max-[1024px]:scale-[1] max-[1400px]:scale-[0.8]">
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
             {features.map((feature, index) => {
               const progress = getCardProgress(index);

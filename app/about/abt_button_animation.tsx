@@ -98,7 +98,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Two Column Layout - Mobile */}
-                    <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-6 lg:mb-8">
+                    <div className="grid grid-cols-2 gap-4 lg:gap-8 mb-6 lg:mb-8">
                         {/* Left Column */}
                         <div className="flex flex-col">
                             {/* Horizontal line */}

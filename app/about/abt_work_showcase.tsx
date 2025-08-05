@@ -231,10 +231,10 @@ export default function WorkShowcase() {
                 backgroundRepeat: 'no-repeat'
               }}
             />
-            <div className="relative w-full max-w-7xl right-4">
+            <div className="relative w-full max-[1400px]:scale-[0.7] max-w-7xl right-4">
               {/* Background Text */}
               <div className="absolute flex items-center justify-center pointer-events-none">
-                <h1 className="text-[80px] lg:text-[120px] ml-32 leading-[-0.95] font-light text-[#D1CFAE] font-regular -translate-y-36">
+                <h1 className="text-[80px] min-[1150px]:text-[120px] ml-32 leading-[-0.95] font-light text-[#D1CFAE] font-regular -translate-y-36">
                   /beyond the <span className='font-domine font-regular'>usual</span>
                 </h1>
               </div>

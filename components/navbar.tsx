@@ -61,7 +61,7 @@ export default function Navbar() {
                         ))}
                     </nav>
                     <motion.div className="hidden lg:block" >
-                      <Link href="/" className="text-4xl lg:text-5xl  text-[#2C2216]  whitespace-nowrap">
+                      <Link href="/" className="text-4xl lg:text-5xl text-[#2C2216]  whitespace-nowrap">
                         <span className="font-domine"> akshita</span>
                         <span> agarwal</span><span className="font-domine">*</span>
                       </Link>

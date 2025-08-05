@@ -50,7 +50,7 @@ export default function WorksWith() {
       </section>
 
       {/* Photo Collage Section - Outside section for better positioning */}
-      <div className="relative z-0 -mt-32 h-80 overflow-visible">
+      <div className="relative z-0 max-[1024px]:scale-[1] max-[1400px]:scale-[0.6] -mt-32 h-80 overflow-visible">
         <div className="max-w-sm lg:max-w-6xl mx-auto px-2 lg:px-4">
           <div className="grid grid-cols-12 gap-2 lg:gap-4 relative">
             {/* Photo 1 - Empty frame for image */}

@@ -22,7 +22,7 @@ export default function AbtReachout() {
     
       <section className="relative z-50 py-10 lg:py-30 h-auto mb-20 pt-10"> {/* Reduced vertical padding for mobile, kept desktop */}
             {/* Main content container - Centers horizontally, acts as relative parent for absolute elements */}
-            <div className="max-w-6xl mx-20 px-4 relative"> 
+            <div className="max-w-6xl max-[1024px]:scale-[1] max-[1400px]:scale-[0.8] mx-20 px-4 relative"> 
                 
                 {/* Container for Megaphone + Header/Button group. Stacks on mobile, row on large screens */}
                 <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:items-center">

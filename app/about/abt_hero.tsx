@@ -21,7 +21,7 @@ export default function HeroSection() {
 
           {/* Center Text */}
           <div className="flex flex-col pl-16 justify-end space-around h-full items-center text-center max-w-2xl">
-            <h1 className="text-6xl  font-domine font-light text-[#9F8267] leading-tight">
+            <h1 className="max-[1400px]:text-5xl text-6xl font-domine font-light text-[#9F8267] leading-tight">
               design<span className="font-sans"> /details </span>that<br />
               feel like magic
             </h1>
