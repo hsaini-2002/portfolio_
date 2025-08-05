@@ -48,7 +48,7 @@ export default function Navbar() {
                     className="hidden lg:flex absolute top-0 bg-[#FEFCE4] left-0 w-full h-24 px-4 lg:px-8 justify-between items-center"
                     // style={{ opacity: navOpacity }}
                 >
-                    <nav className="flex space-x-6 text-[#2C2216] text-lg lg:text-xl font-medium">
+                    <nav className="flex space-x-6 text-[#2C2216] text-lg font-medium">
                         {navLinks.map((link) => (
                             <Link 
                               key={link.href} 
