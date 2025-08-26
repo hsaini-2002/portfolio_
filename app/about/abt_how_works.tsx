@@ -15,7 +15,7 @@ export default function AbtWorksWith() {
             {/* Left Column - Main Heading */}
             <div className="relative">
               <h2 className="text-[32px] lg:text-5xl font-normal text-[#AAE786] mb-8 leading-[38px] lg:leading-14 tracking-[-0.57px] lg:tracking-tight">
-                your design partner in <br/> building /brands that <br/> sell, scale & stand out*.
+              behind every /brand that sticks, there’s a process that works
               </h2>
               
               {/* Hands Image */}
@@ -59,7 +59,7 @@ export default function AbtWorksWith() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <p className="text-[#FEFCE4] leading-6 lg:leading-7 tracking-[-0.31px] lg:tracking-tighter text-sm lg:text-base pr-16">
-                        Through comprehensive research, strategic planning, and iterative design processes that ensure every touchpoint reflects your brand&rsquo;s core values and resonates with your target audience.
+                      Every project starts with clarity - on the audience, the market, and <br/>the gaps worth owning. Design decisions are rooted in brand <br/>strategy, not just aesthetics.
                       </p>
                     </motion.div>
                   )}
@@ -94,7 +94,7 @@ export default function AbtWorksWith() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <p className="text-[#FEFCE4] leading-6 lg:leading-7 tracking-[-0.31px] lg:tracking-tighter text-sm lg:text-base pr-16">
-                        Because it combines data-driven insights with creative storytelling, ensuring your brand not only looks great but also connects emotionally with your audience and drives measurable business results.
+                      When a brand knows what it stands for, it shows. This kind <br/>of alignment builds trust, recognition, and conversion—faster.
                       </p>
                     </motion.div>
                   )}
@@ -128,7 +128,7 @@ export default function AbtWorksWith() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <p className="text-[#FEFCE4] leading-6 lg:leading-7 tracking-[-0.31px] lg:tracking-tighter text-sm lg:text-base pr-16">
-                        A data driven, brand narrative driven approach to position your brand as a leader in the space. A data driven, brand narrative driven approach to position your brand as a leader in the space.
+                      A research-informed, narrative-first approach that positions your<br/> brand to lead  - not just compete.
                       </p>
                     </motion.div>
                   )}

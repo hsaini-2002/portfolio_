@@ -19,15 +19,15 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap max-h-xl items-center">
             <div>
               <h1 className="text-4xl md:text-5xl text-[#51331B] leading-tight md:max-w-xl">
-                your design partner in{" "}
-                <span className="font-domine">building</span>/brands that sell,
-                scale &<span className="font-domine"> stand out*.</span>
+              what people remember when they see your 
+/brand , that’s what I do.
+
               </h1>
             </div>
 
             <div className="w-full h-full mt-8 lg:mt-0">
               <Image
-                src="/loremipsum.png"
+                src="/brandmemoryo.png"
                 alt="A magnifying glass over a piece of paper"
                 width={513}
                 height={378}
@@ -38,18 +38,14 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-8 items-center md:items-start">
             <div>
               <p className="text-center md:text-left md:text-base lg:text-lg md:max-w-[600px]">
-                I help consumer brands turn ideas into design-driven success. As
-                a design partner, I craft identities, packaging, and brand
-                experiences that don&#39;t just look good&#8212;they sell,
-                connect, and last. For me, great design isn&#39;t decoration;
-                it&#39;s strategy, storytelling, and impact.
+              Most brands don’t need more noise. They need clarity. A sharper story. A design system that just makes sense. That’s where I come in.
               </p>
             </div>
 
             <div className="flex flex-col items-center md:items-start  md:ml-6">
               <p className="md:text-base md:text-md uppercase mb-6 text-center md:text-left font-bold">
-                I HELP CONSUMER BRANDS TURN IDEAS INTO DESIGN-DRIVEN SUCCESS. AS
-                A DESIGN PARTNER, I CRAFT IDENTITIES, PACKAGING, AND
+              Because in a crowded market, design is not just the finish-
+              it’s the foundation.
               </p>
               <div className="flex items-center justify-center">
                 <Link href="/about">

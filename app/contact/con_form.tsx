@@ -50,7 +50,7 @@ export default function ContactForm() {
     }));
   };
 
-  const APPSCRIPT_URL = "https://script.google.com/macros/s/AKfycbztc9R39SNV60m-ZzoEwiCydYYhyUxQ7UnBe0b0EVcgl0jPNeM3Y3rmzw2xqZRkfiU4/exec"; // Replace with your actual URL
+  const APPSCRIPT_URL = "https://script.google.com/macros/s/AKfycbwg0jXEOL9d2FqrFinF05vFF7zjXtNtIbi-uq4ikBmZMCZK-K5YdaE7WDzaKz9mLizS/exec"; // Replace with your actual URL
 
   const validateForm = () => {
     const { fullName, phoneNo, emailId, interests, message } = formData;

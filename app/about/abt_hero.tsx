@@ -22,12 +22,12 @@ export default function HeroSection() {
           {/* Center Text */}
           <div className="flex flex-col pl-16 justify-end space-around h-full items-center text-center max-w-2xl">
             <h1 className="max-[1400px]:text-5xl text-6xl font-domine font-light text-[#9F8267] leading-tight">
-              design<span className="font-sans"> /details </span>that<br />
-              feel like magic
+            {/* No fluff. Just /brands that actually land. */}
+            No fluff. Just<span className="font-sans"> /brands </span>
+            that actually land.
             </h1>
-            <p className=" text-base mt-12  items-center max-w-[420px] text-[#51331B]">
-              Passionate about fair creative practices and building a strong design community.
-              I’m here to make brands look good and mean something.
+            <p className=" text-base mt-12  items-center max-w-[520px] text-[#51331B]">
+            Over the years, I’ve worked with founders across categories to build brands with depth, direction, and taste. The kind that feel right on day one - and hold strong in the fluid market.
             </p>
             <div className="flex flex-col items-center mt-12 ">
               <Image
@@ -37,7 +37,7 @@ export default function HeroSection() {
                 height={0}
                 className="mb-4"
               />
-              <p className="text-2xl font-custom  text-[#4a3b2f] italic">
+              <p className="text-2xl font-signature  text-[#4a3b2f] italic">
                 Hi, I&apos;m Akshita!
               </p>
             </div>

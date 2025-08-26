@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Hero from "../components/landing_page/hero";
-import FeaturedWorkStack from "../components/landing_page/cards/stack";
+// import FeaturedWorkStack from "../components/landing_page/cards/stack";
 import Link from "next/link";
 import AboutSection from "../components/landing_page/about";
 import InstagramFeed from "@/components/landing_page/instagramfeed";
 import LetsBuildBold from "../components/landing_page/letsbuildbold";
 import ScrollCarousel from "../components/landing_page/scrollcarousel";
-import HorizontalSrcoll from "@/components/landing_page/horizontalSrcoll";
+// import HorizontalSrcoll from "@/components/landing_page/horizontalSrcoll";
 import SwipeCards from "@/components/landing_page/testimonials";
 import Header from "@/components/landing_page/header";
+import FeaturedWork from "@/components/landing_page/cards/FeaturedWork.server";
+import HorizontalScrollServer from "@/components/landing_page/HorizontalScroll.server";
 
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
       <div className="">
         <Hero />
         <div className="flex flex-col items-center justify-center text-center pt-10 pb-0">
-          <FeaturedWorkStack />
+          <FeaturedWork />
         </div>
         <div className="flex justify-center items-center  mt-8">
           <Link href="/work" className="inline-block">
@@ -36,12 +38,16 @@ export default function Home() {
         </div>
       </div>
       <div className="">
-        <HorizontalSrcoll />
+        <HorizontalScrollServer />
       </div>
       <SwipeCards />
       <InstagramFeed />
       <LetsBuildBold />
-
+      {/* <FeaturedProjects /> */}
+      {/* <ProjectDetails />
+      <Testimonials />
+      <Blogs /> */}
     </>
   );
 }
+

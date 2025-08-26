@@ -42,8 +42,9 @@ export default function AbtReachout() {
                     {/* Header and Button Group */}
                     <div className="flex flex-col items-center">
                         <div className="relative z-50 text-center"> {/* Added text-center for mobile alignment */}
-                            <h2 className="text-[38px] min-[470px]:ml-16 lg:ml-0 lg:text-[64px] leading-[34px] lg:leading-[109px] font-regular text-[#51331B] mb-4 lg:mb-0"> {/* Adjusted font size for mobile, preserved desktop */}
-                                Reach out now
+                            <h2 className="text-[38px] min-[470px]:ml-16 lg:ml-0 lg:text-[64px] leading-[42px] lg:leading-[65px] font-regular text-[#51331B] mb-4 lg:mb-0"> {/* Adjusted font size for mobile, preserved desktop */}
+                            Got a vision? <br/>
+                            Let’s make it real.
                             </h2>
                             
                             {/* Floral element overlapping */}

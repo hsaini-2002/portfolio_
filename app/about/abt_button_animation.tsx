@@ -22,7 +22,7 @@ export default function HeroSection() {
                     {/* Main Heading */}
                     <div className="mb-16">
                         <h1 className="text-[#AAC7FF] text-5xl min-[1400px]:text-6xl font-domine leading-18 tracking-[-0.57px] font-normal">
-                            the idea of design is <br /> shifting. it’s dynamic <br /> than ever.
+                        design today isn’t<br/> just aesthetic, it’s business-critical.
                         </h1>
                     </div>
 
@@ -40,8 +40,8 @@ export default function HeroSection() {
                             <div className="flex-grow"></div>
                             
                             {/* Content at bottom with increased spacing */}
-                            <p className="text-sm text-[#AAC7FF] leading-5 pr-8 mb-8 font-regular">
-                                I create strategies that cut through the noise and make an impact. I believe great design isn’t just about looking good—it’s about telling a story that sticks.
+                            <p className="text-base text-[#AAC7FF] leading-5 pr-8 mb-8 font-regular">
+                            I believe great brands are built at the intersection of intent and identity. I care about smart decisions, scalable systems, and honest expression. From first insight to final file, I bring a mix of sharp thinking, empathy, and execution that helps teams move with confidence and taste.
                             </p>
                         </div>
 
@@ -52,15 +52,15 @@ export default function HeroSection() {
                             
                             {/* Content at same level as left column heading */}
                             <p className="text-sm text-[#AAC7FF] leading-5 mb-8">
-                                I help consumer brands turn ideas into design–driven success. I help consumer brands turn ideas into design–driven success.
+                            I play the game differently—fair, collaborative, and bullshit-free. Because design deserves better than rushed briefs and unpaid pitches.
                             </p>
                             
                             {/* Push content to bottom with flex-grow */}
                             <div className="flex-grow"></div>
                             
                             {/* Content at bottom with increased spacing */}
-                            <p className="text-sm text-[#AAC7FF] leading-5 ">
-                                Passionate about fair creative practices and building a strong design community, I’m here to make brands look good and mean something. My industry connections and sharp eye for final output mean I know how to make ideas look good—and make sense.
+                            <p className="text-base text-[#AAC7FF] leading-5 mb-14 ">
+                                With 4+ years in brand identity and packaging, I’ve worked with fast-moving startups and founder-led brands to create design that cuts through noise and builds real connection. My work isn’t about trends — it’s about clarity, strategy, and story.
                             </p>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ export default function HeroSection() {
                     {/* Main Heading */}
                     <div className="mb-6 lg:mb-8">
                         <h1 className="text-[#AAC7FF] text-2xl md:text-3xl lg:text-4xl font-domine leading-tight tracking-[-0.57px] font-normal">
-                            the idea of design is <br /> shifting. it&apos;s dynamic <br /> than ever.
+                        design today isn’t<br/> just aesthetic, it’s business-critical.
                         </h1>
                     </div>
 
@@ -112,7 +112,7 @@ export default function HeroSection() {
                             
                             {/* Content at bottom with reduced spacing */}
                             <p className="text-xs md:text-sm text-[#AAC7FF] leading-4 md:leading-5 pr-6 md:pr-4 mb-10 md:mb-6 font-regular">
-                                I create strategies that cut through the noise and make an impact. I believe great design isn&apos;t just about looking good—it&apos;s about telling a story that sticks.
+                            I believe great brands are built at the intersection of intent and identity. I care about smart decisions, scalable systems, and honest expression. From first insight to final file, I bring a mix of sharp thinking, empathy, and execution that helps teams move with confidence and taste.
                             </p>
                         </div>
 
@@ -123,7 +123,7 @@ export default function HeroSection() {
                             
                             {/* Content at same level as left column heading */}
                             <p className="text-xs md:text-sm text-[#AAC7FF] leading-4 md:leading-5 mb-2 md:mb-6">
-                                I help consumer brands turn ideas into design–driven success. I help consumer brands turn ideas into design–driven success.
+                            I play the game differently—fair, collaborative, and bullshit-free. Because design deserves better than rushed briefs and unpaid pitches.
                             </p>
                             
                             {/* Reduced vertical spacing but keep flex-grow */}
@@ -131,7 +131,7 @@ export default function HeroSection() {
                             
                             {/* Content at bottom with reduced spacing */}
                             <p className="text-xs md:text-sm text-[#AAC7FF] leading-4 md:leading-5 mt-2 md:mt-6">
-                                Passionate about fair creative practices and building a strong design community, I&apos;m here to make brands look good and mean something. My industry connections and sharp eye for final output mean I know how to make ideas look good—and make sense.
+                            With 4+ years in brand identity and packaging, I’ve worked with fast-moving startups and founder-led brands to create design that cuts through noise and builds real connection. My work isn’t about trends — it’s about clarity, strategy, and story.
                             </p>
                         </div>
                     </div>

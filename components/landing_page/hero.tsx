@@ -65,7 +65,7 @@ export default function Hero() {
         className="w-auto py-10 hidden sm:flex items-center justify-center text-[#2C2216] text-sm"
         ref={imageRef}
       >
-        <Image src="/hero4x.png" alt="hero" width={1108} height={674} className="md:-ml-40" />
+        <Image src="/herolanding.webp" alt="hero" width={1108} height={674} className="md:-ml-5" />
       </div>
 
       {/* Middle Image for mobile */}
@@ -73,32 +73,25 @@ export default function Hero() {
         className="w-auto py-5 flex sm:hidden items-center justify-center text-[#2C2216] text-sm"
         ref={imageRef}
       >
-        <Image src="/Heromobile.png" alt="hero" width={462} height={523} />
+        <Image src="/herolanding.webp" alt="hero" width={482} height={523} />
       </div>
 
-      <div className="mt-8 flex flex-row items-center justify-between md:justify-center mx-4 md:mx-24">
-        {/* Hero Content */}
-        {/* Left Text Column (mobile stacked) */}
-        <div className="flex text-[#2C2216] text-sm md:text-base leading-relaxed mx-1 max-w-[50%] sm:max-w-2xs md:max-w-full lg:mx-18">
-          <p>
-            I help consumer brands turn ideas into design-driven success. As a
-            design partner, I craft identities, packaging, and brand experiences
-            that don’t just look good—they sell, connect, and last. For me,
-            great design isn’t decoration; it’s strategy, storytelling, and
-            impact.
-          </p>
-        </div>
+      <div className="mt-8 flex flex-row items-start justify-between md:justify-center mx-4 md:mx-24">
+  {/* Hero Content */}
+  {/* Left Text Column (mobile stacked) */}
+  <div className="flex flex-col items-start text-[#2C2216] text-sm md:text-base leading-relaxed mx-1 max-w-[50%] sm:max-w-2xs md:max-w-full lg:mx-18">
+    <p>
+      Strong brands aren’t just seen - they’re felt. They know who they’re speaking to, what they stand for, and how to show up in ways that actually stick. That’s where design comes in.
+    </p>
+  </div>
 
-        <div className="flex text-[#2C2216] text-sm md:text-base leading-relaxed max-w-[50%] sm:max-w-2xs md:max-w-full mx-1 sm:mx-8 lg:mx-18">
-          <p>
-            I help consumer brands turn ideas into design-driven success. As a
-            design partner, I craft identities, packaging, and brand experiences
-            that don’t just look good—they sell, connect, and last. For me,
-            great design isn’t decoration; it’s strategy, storytelling, and
-            impact.
-          </p>
-        </div>
-      </div>
+  <div className="flex flex-col items-start text-[#2C2216] text-sm md:text-base leading-relaxed max-w-[50%] sm:max-w-2xs md:max-w-full mx-1 sm:mx-8 lg:mx-18">
+    <p>
+      Not as the final layer, but as a strategic tool - one that turns positioning into presence, and decisions into identity. It’s what brings clarity and cohesion to every touchpoint- from shelves to screens and everything in between.
+    </p>
+  </div>
+</div>
+
     </section>
   );
 }
